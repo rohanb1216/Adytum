@@ -1,10 +1,11 @@
 class room{
-    constructor(u,r,d,l){
+    constructor(u,r,d,l,puzzleType){
         this.uRoom=u;
         this.rRoom=r;
         this.dRoom=d;
         this.lRoom=l;
         this.state=false;
+        this.puzzle=puzzleType;
     }
     doorNum(num){
         switch (num) {
