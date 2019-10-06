@@ -6,11 +6,7 @@ class room {
         this.code = "";
     }
     codeGenerate() {
-        var howManyDigits = 2;
-        var howManyResuls = 1;
-
         var str = '';
-        
         var res = '';
         for (var j = 0; j < 2; j++) {
             var randByte = parseInt(Math.random() * 16, 10).toString(16);
