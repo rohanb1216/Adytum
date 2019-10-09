@@ -27,6 +27,9 @@
     color: white;
   }
 
-  #room{
-      background-image: url("background.png");
+  body{
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
   }
