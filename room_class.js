@@ -1,9 +1,10 @@
 class room {
-    constructor(puzzleType, special) {
+    constructor(puzzleType, special,page) {
         this.state = false;
         this.puzzle = puzzleType;
         this.type = special;
         this.code = "";
+        this.page=page;
     }
     codeGenerate() {
         var str = '';
@@ -19,7 +20,7 @@ class room {
 }
 function travel(currRoom, nextRoom) {
     if (currRoom.state || nextRoom.state) {
-        return nextRoom;
+        window.location.href = nextRoom.page;
     }
 }
 function solved(currRoom) {
