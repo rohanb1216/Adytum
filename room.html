@@ -11,12 +11,13 @@
         <a href="FAQ.html">FAQ</a>
         <a href="ContactUs.html">Contact Us</a>
         <img src="logo.png" height="45" style="float: right" />
+        <button id="hide">V</button>
     </div>
     <br>
     <div class="room">
-        <button onclick=travel(currRoom,nextRoom)></button><br>
-        <button onclick=travel(currRoom,nextRoom) style="float: left;"></button>
-        <button onclick=travel(currRoom,nextRoom) style="float: right;"></button><br>
-        <button onclick=travel(currRoom,nextRoom) id="bottom"></button>
+        <button onclick=travel(currRoom,nextRoom)>Go Up</button><br>
+        <button onclick=travel(currRoom,nextRoom) class="left">Go Left</button>
+        <button onclick=travel(currRoom,nextRoom) class="right">Go Right</button><br>
+        <button onclick=travel(currRoom,nextRoom) class="bottom">Go Down</button>
     </div>
 </html>

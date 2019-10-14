@@ -48,13 +48,23 @@
   }
 
   .room button{
-    width: 34px;
-    height: 21px;
+    width: 55px;
+    height: 34px;
     border-radius: 4px;
     border-style: solid;
 
   }
   .bottom{
     position: absolute;
-    bottom: 10px;
+    bottom: 8px;
+  }
+  .left{
+    position: absolute;
+    top: 50vh;
+    left:0px;
+  }
+  .right{
+    position: absolute;
+    top: 50vh;
+    right: 0px;
   }

@@ -27,6 +27,21 @@ function solved(currRoom) {
     currRoom.state = true;
 }
 
+function hide(element){
+    var ele = document.getElementById(element);
+    if(ele.style.display=="hidden"){
+        ele.style.display="block";
+        console.log(ele.style.display);
+    }
+    else{
+        ele.style.display="hidden";
+        console.log(ele.style.display);
+    }
+}
+
+window.onload=function(){
+    document.getElementById("hide").addEventListener("click",hide("navbar"),false);
+};
 room1 = new room("cipher", false);
 room1.codeGenerate();
 console.log(room1.code);
