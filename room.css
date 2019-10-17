@@ -62,9 +62,11 @@
     position: absolute;
     top: 50vh;
     left:0px;
+    rotate: 180deg;
   }
   .right{
     position: absolute;
     top: 50vh;
     right: 0px;
+    rotate: -180deg;
   }
