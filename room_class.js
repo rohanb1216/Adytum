@@ -29,18 +29,27 @@ function solved(currRoom) {
 
 function hide(element){
     var ele = document.getElementById(element);
-    if(ele.style.display=="hidden"){
+    if(ele.style.display=="none"){
         ele.style.display="block";
         console.log(ele.style.display);
     }
     else{
-        ele.style.display="hidden";
+        ele.style.display="none";
         console.log(ele.style.display);
     }
 }
 
 window.onload=function(){
-    document.getElementById("hide").addEventListener("click",hide("navbar"),false);
+    var hidebtn = document.getElementById("hide");
+    hidebtn.addEventListener("click",function(){
+        hide("navbar");
+        if(hidebtn.innerHTML=="v"){
+            hidebtn.innerHTML="^";
+        }
+        else{
+            hidebtn.innerHTML="v";
+        }
+    },false);
 };
 room1 = new room("cipher", false);
 room1.codeGenerate();
