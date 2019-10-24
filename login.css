@@ -16,7 +16,7 @@
     border-color: rgb(77, 6, 71);
     border-style: solid;
     padding: 8px;
-    background-color: darkgray;
+    background-color: rgb(252, 249, 249);
     
 }
 
@@ -25,7 +25,7 @@
     border-color: rgb(77, 6, 71);
     border-style: solid;
     padding: 8px;
-    background-color: darkgray;
+    background-color: rgb(252, 249, 249);
 }
 
 #login-text{
@@ -38,3 +38,32 @@ body{
 }
 
 
+.input {
+    display: block;
+  }
+  .input span {
+    position: absolute;
+    z-index: 1;
+    cursor: text;
+    pointer-events: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #999;
+    /* Input padding + input border */
+    padding: 7px;
+    /* Firefox does not respond well to different line heights. Use padding instead. */
+    line-height: 17px;
+    /* This gives a little gap between the cursor and the label */
+    margin-left: 2px;
+  }
+  .input input, .input textarea, .input select {
+    z-index: 0;
+    padding: 6px;
+    margin: 0;
+    font: inherit;
+    line-height: 17px;
+  }
+  .input select {
+    padding: 5px;
+    /* Unfortunately selects don't respond well to padding. They need an explicit height. */
+    height: 31px;
+  }
