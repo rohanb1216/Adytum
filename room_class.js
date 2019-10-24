@@ -1,3 +1,4 @@
+var puzzle="puzzle";
 class room {
     constructor(puzzleType, special,page) {
         this.state = false;
