@@ -17,8 +17,13 @@
     <br>
     <div class="room">
         <button onclick=travel(currRoom,nextRoom)>Go Up</button><br>
-        <button onclick=travel(currRoom,nextRoom) class="left">Go Left</button>
+        <button onclick=travel(currRoom,nextRoom) class="left">Go Left</button> 
+        <button onclick=hide("puzzle") class="showPuzzle">Show Puzzle</button>
         <button onclick=travel(currRoom,nextRoom) class="right">Go Right</button><br>
         <button onclick=travel(currRoom,nextRoom) class="bottom">Go Down</button>
+    </div>
+    <div id="puzzle">
+        <iframe src="./puzzle1.html" ></iframe>
+        <button onclick=hide("puzzle") class="closebtn">[x]</button>
     </div>
 </html>
