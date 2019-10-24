@@ -24,6 +24,7 @@ function travel(currRoom, nextRoom) {
     }
 }
 function solved(currRoom) {
+    //placeholder;  Replace with function to set value on server
     currRoom.state = true;
 }
 
