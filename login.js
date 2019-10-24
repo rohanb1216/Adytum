@@ -8,3 +8,9 @@ function login(){
         window.location.href="room.html";
     }
 } 
+
+window.onload=function(){
+
+    document.getElementById("submit").addEventListener("click",login);
+
+}
