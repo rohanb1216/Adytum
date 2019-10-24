@@ -7,66 +7,73 @@
     font-family: sans-serif;
     border-radius: 4px;
     border: solid darkgray;
-  }
-  
-  /* Navbar links */
-  #navbar a {
+}
+
+
+/* Navbar links */
+
+#navbar a {
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 20px;
     text-decoration: none;
-  }
-  #navbar a:hover {
+}
+
+#navbar a:hover {
     background-color: #353333;
     color: rgb(255, 255, 255);
-  }
-  
-  #navbar a.active {
+}
+
+#navbar a.active {
     background-color: #2e2e2e;
     color: white;
-  }
+}
 
-  body{
+body {
     background: black;
     /* background-image: url("background.png");
     background-size: cover;
     background-position: center; /* Center the image */
     /*background-repeat: no-repeat; Do not repeat the image */
-  }
+}
 
-  .room{
+.room {
     text-align: center;
     background-image: url("background.png");
     background-size: cover;
-    background-position: center; /* Center the image */
+    background-position: center;
+    /* Center the image */
     background-repeat: no-repeat;
     height: 100vh;
     border-radius: 2px;
     position: relative;
-  }
+}
 
-  .room button{
+.room button {
     width: 55px;
     height: 34px;
     border-radius: 4px;
     border-style: solid;
+}
 
-  }
-  .bottom{
+.bottom {
     position: absolute;
     bottom: 8px;
-  }
-  .left{
+    left: 48%;
+}
+
+.left {
     position: absolute;
     top: 50vh;
-    left:0px;
+    left: 0px;
     rotate: 180deg;
-  }
-  .right{
+}
+
+.right {
     position: absolute;
     top: 50vh;
     right: 0px;
     rotate: -180deg;
-  }
+}
