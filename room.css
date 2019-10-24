@@ -33,6 +33,7 @@
 
 body {
     background: black;
+    text-align: center;
     /* background-image: url("background.png");
     background-size: cover;
     background-position: center; /* Center the image */
@@ -42,13 +43,15 @@ body {
 .room {
     text-align: center;
     background-image: url("background.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
+    width: 62.775vw;
     border-radius: 2px;
-    position: relative;
+    position: absolute;
+    left: 18vw;
 }
 
 .room button {
@@ -66,14 +69,14 @@ body {
 
 .left {
     position: absolute;
-    top: 50vh;
+    top: 45vh;
     left: 0px;
     rotate: 180deg;
 }
 
 .right {
     position: absolute;
-    top: 50vh;
+    top: 45vh;
     right: 0px;
     rotate: -180deg;
 }
