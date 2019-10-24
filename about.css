@@ -1,0 +1,13 @@
+body{
+    background-color:rgb(20, 20, 20);
+}
+
+#overview-title{
+    color : darkblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.generic-text{
+    color : darkblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
