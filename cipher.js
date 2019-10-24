@@ -18,17 +18,16 @@ function showText(text) {
 function check() {
     var answer = document.getElementById("answer").value;
     if (answer == question) {
-        solved(room1);
-    }
-    else {
+        console.log("correct"); //solved(room1);
+    } else {
         document.getElementById("answer").classList.add("incorrect");
     }
 }
 
-window.onload(function () {
-
+window.onload = function() {
+    var question = "adytum";
     var text = caesarCipher(question, Math.floor(Math.random() * 26));
     showText(text);
     document.getElementsByTagName("button")[0].addEventListener("click", check());
 
-})
+}
