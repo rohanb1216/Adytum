@@ -1,0 +1,12 @@
+.general-button{
+    padding: 8px;
+    background-color: greenyellow;
+    border-radius: 5px;
+    text-align: center;
+    height : 40px;
+    width : 150px;
+    border : solid;
+    border-style: solid;
+    border-color: darkgreen;
+}
+
