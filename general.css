@@ -10,3 +10,9 @@
     border-color: darkgreen;
 }
 
+#pyramid-home{
+    background-image: url("pyramid_top_view.jpeg");
+    background-size:cover;
+    width: 97vw;
+    height: 87vh; 
+}
