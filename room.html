@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="room.css">
         <script src="room_class.js"></script>
     </head>
-    <div id="navbar">
+    <div id="navbar" class="Active">
         <a href="home.html">Home</a>
         <a href="leaderboard.html">Leaderboard</a>
         <a href="FAQ.html">FAQ</a>
@@ -22,7 +22,7 @@
         <button onclick=travel(currRoom,nextRoom) class="right">Go Right</button><br>
         <button onclick=travel(currRoom,nextRoom) class="bottom">Go Down</button>
     </div>
-    <div id="puzzle">
+    <div id="puzzle" class="Inactive">
         <iframe src="./puzzle1.html" ></iframe>
         <button onclick=hide(puzzle) class="closebtn">[x]</button>
     </div>
