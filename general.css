@@ -12,8 +12,7 @@
 
 #pyramid-home{
     background-image: url("pyramid_top_view.jpeg");
-    background-repeat: no-repeat;
-    max-width: 200%;
-    height:auto;
-
+    background-size:cover;
+    width: 97vw;
+    height: 87vh; 
 }
