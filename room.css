@@ -101,7 +101,6 @@ body {
     height: 100%;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.9);
-    display: none;
     text-align: center;
     z-index: 1;
     transition: 0.5s;
@@ -126,8 +125,14 @@ iframe {
 .Active {
     display: block;
     animation-name: activeSwitch;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
 
 .Inactive {
     display: none;
+    animation-name: activeSwitch;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
 }
