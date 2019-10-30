@@ -5,6 +5,12 @@
         <link rel="stylesheet" href="room.css">
         <link rel="stylesheet" href="general.css">
         <script src="room_class.js"></script>
+        <script>
+            var lroom = "lroomno";
+            var rroom = "rroomno";
+            var uroom = "uroomno";
+            var droom = "droomno"; //change string accoding to map
+        </script>
     </head>
     <div id="navbar" class="Active">
         <a href="home.html">Home</a>
@@ -17,11 +23,11 @@
     <button id="hide">v</button>
     <br>
     <div class="room">
-        <button class = "room-button" onclick=travel(currRoom,nextRoom)>Go Up</button><br>
-        <button onclick=travel(currRoom,nextRoom) class="room-button left">Go Left</button> 
+        <button class = "room-button" onclick=travel(currRoom,uroom)>Go Up</button><br>
+        <button onclick=travel(currRoom,lroom) class="room-button left">Go Left</button> 
         <button onclick=hide(puzzle) class="room-button showPuzzle">Show Puzzle</button>
-        <button onclick=travel(currRoom,nextRoom) class="room-button right">Go Right</button><br>
-        <button onclick=travel(currRoom,nextRoom) class="room-button bottom">Go Down</button>
+        <button onclick=travel(currRoom,rroom) class="room-button right">Go Right</button><br>
+        <button onclick=travel(currRoom,droom) class="room-button bottom">Go Down</button>
     </div>
     <div id="puzzle" class="Inactive">
             <iframe src="./puzzle1.html" ></iframe>

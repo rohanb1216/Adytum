@@ -55,6 +55,6 @@ window.onload=function(){
         }
     },false);
 };
-room1 = new room("cipher", false);
+room1 = new room("cipher", false, "roomno");
 room1.codeGenerate();
 console.log(room1.code);
