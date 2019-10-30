@@ -3,6 +3,7 @@
     <head>
         <title>Adytum</title>
         <link rel="stylesheet" href="room.css">
+        <link rel="stylesheet" href="general.css">
         <script src="room_class.js"></script>
     </head>
     <div id="navbar" class="Active">
@@ -16,11 +17,11 @@
     <button id="hide">v</button>
     <br>
     <div class="room">
-        <button onclick=travel(currRoom,nextRoom)>Go Up</button><br>
-        <button onclick=travel(currRoom,nextRoom) class="left">Go Left</button> 
-        <button onclick=hide(puzzle) class="showPuzzle">Show Puzzle</button>
-        <button onclick=travel(currRoom,nextRoom) class="right">Go Right</button><br>
-        <button onclick=travel(currRoom,nextRoom) class="bottom">Go Down</button>
+        <button class = "room-button" onclick=travel(currRoom,nextRoom)>Go Up</button><br>
+        <button class = "room-button" onclick=travel(currRoom,nextRoom) class="left">Go Left</button> 
+        <button class = "room-button" onclick=hide(puzzle) class="showPuzzle">Show Puzzle</button>
+        <button class = "room-button" onclick=travel(currRoom,nextRoom) class="right">Go Right</button><br>
+        <button class = "room-button" onclick=travel(currRoom,nextRoom) class="bottom">Go Down</button>
     </div>
     <div id="puzzle" class="Inactive">
         <iframe src="./puzzle1.html" ></iframe>
