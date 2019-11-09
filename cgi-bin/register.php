@@ -1,6 +1,6 @@
-<!-- <html>
-<body> -->
+<html>
 
+<body>
 <?php
 echo "Data processed" . "<br>";
 
@@ -10,6 +10,5 @@ $password = $_POST['password'];
 echo "Username : " . $username . " <br>";
 
 ?>
-
-<!-- </body>
-</html> -->
+</body>
+</html>
