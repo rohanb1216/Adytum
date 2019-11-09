@@ -30,4 +30,4 @@ window.onload = function() {
     showText(text);
     document.getElementsByTagName("button")[0].addEventListener("click", check());
 
-}
+};
