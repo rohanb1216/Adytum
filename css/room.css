@@ -124,15 +124,19 @@ iframe {
 
 .Active {
     display: block;
-    animation-name: activeSwitch;
+    visibility: visible;
+    opacity: 1;
+    transition:visibility 0s, opacity 0.5s ;
+    transition-timing-function: ease-in;
+    /* animation-name: activeSwitch;
     animation-duration: 1s;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in; */
 }
 
 .Inactive {
-    display: none;
-    animation-name: activeSwitch;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-direction: reverse;
+    display: block; 
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 0s, opacity 0.5s;
+    transition-timing-function: ease-in;
 }
