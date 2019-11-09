@@ -1,3 +1,4 @@
+var puzzle="puzzle";
 class room {
     constructor(puzzleType, special,page) {
         this.state = false;
@@ -28,15 +29,17 @@ function solved(currRoom) {
     currRoom.state = true;
 }
 
-function hide(element){
+function hide(element) {
     var ele = document.getElementById(element);
-    if(ele.style.display=="none"){
-        ele.style.display="block";
+    if (ele.classList[0] == "Active") {
+        ele.classList.replace("Active", "Inactive");
         console.log(ele.style.display);
     }
-    else{
-        ele.style.display="none";
-        console.log(ele.style.display);
+    else {
+        if (ele.classList[0] == "Inactive") {
+            ele.classList.replace("Inactive", "Active");
+            console.log(ele.style.display);
+        }
     }
 }
 
@@ -52,6 +55,6 @@ window.onload=function(){
         }
     },false);
 };
-room1 = new room("cipher", false);
+room1 = new room("cipher", false, "roomno");
 room1.codeGenerate();
 console.log(room1.code);
