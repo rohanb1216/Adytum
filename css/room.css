@@ -52,7 +52,7 @@ body {
 
 .room {
     text-align: center;
-    background-image: url("background.png");
+    background-image: url("../images/background.png");
     background-size: contain;
     background-position: center;
     /* Center the image */
@@ -81,14 +81,14 @@ body {
     position: absolute;
     top: 45vh;
     left: 0px;
-    rotate: 180deg;
+    transform: rotate(0.25turn);
 }
 
 .right {
     position: absolute;
     top: 45vh;
     right: 0px;
-    rotate: -180deg;
+    transform: rotate(0.75turn);
 }
 
 .showPuzzle {
