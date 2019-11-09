@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>Adytum</title>
-        <link rel="stylesheet" href="room.css">
-        <link rel="stylesheet" href="general.css">
-        <script src="room_class.js"></script>
+        <link rel="stylesheet" href="../css/room.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <script src="../src/room_class.js"></script>
         <script>
             var lroom = "lroomno";
             var rroom = "rroomno";
@@ -17,7 +17,7 @@
         <a href="leaderboard.html">Leaderboard</a>
         <a href="FAQ.html">FAQ</a>
         <a href="about.html">About</a>
-        <img src="logo.png" height="45" style="float: right" />
+        <img src="../images/logo.png" height="45" style="float: right" />
         
     </div>
     <button id="hide">v</button>
@@ -30,7 +30,7 @@
         <button onclick=travel(currRoom,droom) class="room-button bottom">Go Down</button>
     </div>
     <div id="puzzle" class="Inactive">
-            <iframe src="./puzzle1.html" ></iframe>
+            <iframe src="../puzzles/puzzle1.html" ></iframe>
         <button onclick=hide(puzzle) class="closebtn">[x]</button>
     </div>
 </html>
