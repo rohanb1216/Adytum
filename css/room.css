@@ -52,7 +52,7 @@ body {
 
 .room {
     text-align: center;
-    background-image: url("background.png");
+    background-image: url("../images/background.png");
     background-size: contain;
     background-position: center;
     /* Center the image */
