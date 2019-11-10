@@ -2,6 +2,7 @@
 <?php  
 include('addUser.php');
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +37,7 @@ include('addUser.php');
             <br>
             <label class = "txt-white">Username</label>
             <br>
-            <input type="text" id ="reg-username" name = "username" placeholder="Enter a username"  class = "general-text">
+            <input type="text" id ="reg-username" name = "username" placeholder="Enter a username"  class = "general-text" value = "<?php echo $username; ?>">
             <br><br>
 
             <label class = "txt-white">Email address</label>
