@@ -65,10 +65,15 @@ body {
 }
 
 .room button {
-    width: 55px;
-    height: 34px;
-    border-radius: 4px;
+    padding: 3px;
+    background-color:purple;    
+    border-radius: 5px;
     border-style: solid;
+    border-color: darkviolet;
+}
+.room button:hover{
+    background-color:darkslateblue ;
+    transition: background-color 1s;
 }
 
 .bottom {
@@ -120,6 +125,14 @@ iframe {
     top: 20px;
     right: 45px;
     font-size: 20px;
+    background-color:red ;
+    border-radius: 7px;
+    border-style: solid;
+    border-color: darkred ;
+}
+.closebtn:hover{
+    background-color: rgb(172, 4, 4);
+    transition: background-color 1s;
 }
 
 .Active {
