@@ -42,7 +42,7 @@ include('addUser.php');
 
             <label class = "txt-white">Email address</label>
             <br>
-            <input type="email" id="reg-email" name = "email" placeholder="Enter your email address" class = "general-text">
+            <input type="email" id="reg-email" name = "email" placeholder="Enter your email address" class = "general-text" value = "<?php echo $email; ?>">
             <br><br>
 
             <label class = "txt-white">Password</label>
@@ -52,7 +52,7 @@ include('addUser.php');
 
             <label class = "txt-white">Re-enter Password</label>
             <br>
-            <input type="password" id="reg-password-confirm" name = "password-confirm" placeholder="Re-enter password" class = "general-text">
+            <input type="password" id="reg-password-confirm" name = "password_confirm" placeholder="Re-enter password" class = "general-text">
             <br><br>
 
             <input type="submit" value="Sign Up" name = "submit" class = "general-button">

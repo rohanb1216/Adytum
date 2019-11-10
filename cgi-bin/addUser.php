@@ -17,6 +17,9 @@ function validate_form($username,$email,$password,$password_confirm){
     if (empty($password)) { array_push($errors, "Password is required"); }
 
     if ($password != $password_confirm) {
+        echo "password1 : ".$password;
+        echo "password2 : ".$password_confirm;
+
         array_push($errors, "The two passwords do not match");
     }
 
@@ -24,7 +27,7 @@ function validate_form($username,$email,$password,$password_confirm){
     
 }
 
-function process_data($username,$email,$password,$password_confirm){
+function check_data_errors($username,$email,$password,$password_confirm){
 
     $errors = array();
 
@@ -38,7 +41,7 @@ function process_data($username,$email,$password,$password_confirm){
     else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         array_push($errors,"Invalid e-mail format ");
     }
-    else if(strlen($password <6)){
+    else if(strlen($password) <6){
         array_push($errors,"Password must be more than 6 characters");
     }
 
@@ -78,6 +81,12 @@ function register_user($username,$email,$password){
 
 }
 
+function trim_data(&$username,&$email,&$password){
+    trim($username);
+    trim($email);
+    trim($password);
+}
+
 //main
 
 if(isset($_POST['submit'])){
@@ -86,14 +95,24 @@ if(isset($_POST['submit'])){
     $email = mysqli_real_escape_string($dbc, $_POST['email']);
     $password = mysqli_real_escape_string($dbc, $_POST['password']);
     $password_confirm = mysqli_real_escape_string($dbc, $_POST['password_confirm']);
-
+    
+    $form_errors = array();$data_errors = array();$name_errors = array();
     //Form validation time
     //Adds all errors to their error arrays
     $form_errors = validate_form($username,$email,$password,$password_confirm);
-    $data_errors = process_data($username,$email,$password,$password_confirm);
+    $data_errors = check_data_errors($username,$email,$password,$password_confirm);
+ 
     $name_errors = check_existing_username($username,$email);
-    $errors = $form_errors + $data_errors + $name_errors;
     
+    $errors = $form_errors;
+    foreach($data_errors as $error){
+        array_push($errors,$error);
+    }
+    foreach($name_errors as $error){
+        array_push($errors,$error);
+    }
+
+    trim_data($username,$email,$password);
 
     if(empty($form_errors) && empty($data_errors) && empty($name_errors)){
         register_user($username,$email,$password);
