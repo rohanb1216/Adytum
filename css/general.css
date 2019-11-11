@@ -45,6 +45,7 @@ body{
     border-color: darkgreen;
 }
 
+<<<<<<< HEAD
 .txt-white{
     font : 400 16px/1.5 Proxima Nova,proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 13px;
@@ -52,6 +53,8 @@ body{
 
 }
 
+=======
+>>>>>>> 1bee90e94c79a977fe06df50215d083c25be1e8f
 #pyramid-home{
     background-image: url("../images/pyramid_top_view.jpeg");
     background-repeat: no-repeat;
