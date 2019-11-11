@@ -6,6 +6,7 @@ require_once('connect/mysqli_connect.php');
 $errors = array();
 $username = "";
 $email = "";
+$timezone = date_default_timezone_get();
 
 //this checks for basic user input errors like blank fields and non-matching passwords
 function validate_form($username,$email,$password,$password_confirm){
@@ -53,7 +54,7 @@ function check_existing_username($username,$email){
 
     $errors = array();
     //now check if the user already exists
-    $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
+    $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1;";
     $result = mysqli_query($dbc, $user_check_query);
     $user = mysqli_fetch_assoc($result);
     
@@ -72,11 +73,18 @@ function check_existing_username($username,$email){
 function register_user($username,$email,$password){
     $password = md5($password);//encrypt the password before saving in the database
 
-    $query = "INSERT INTO users (username, email, password) 
-              VALUES('$username', '$email', '$password')";
+
+              
+    $current_date = date('Y-m-d');
+    
+    $query = "INSERT INTO users (id,username, email, password, date_created) 
+              VALUES('$username', '$email', '$password',$current_date);";
+
     mysqli_query($dbc, $query); 
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
+    echo "WORK plz";
+
     // header('location: index.php');
 
 }
@@ -115,9 +123,10 @@ if(isset($_POST['submit'])){
     trim_data($username,$email,$password);
 
     if(empty($form_errors) && empty($data_errors) && empty($name_errors)){
+        // echo "<p class = 'txt-white'>You have successfully registered</p>";
         register_user($username,$email,$password);
     }
-}
+}     
 
 
 ?>
