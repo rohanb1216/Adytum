@@ -125,6 +125,8 @@ iframe {
     top: 20px;
     right: 45px;
     font-size: 20px;
+    height: 30px;
+    width: 30px;
     background-color:red ;
     border-radius: 7px;
     border-style: solid;
@@ -133,6 +135,9 @@ iframe {
 .closebtn:hover{
     background-color: rgb(172, 4, 4);
     transition: background-color 1s;
+}
+.closebtn:before{
+    content: "\00d7";
 }
 
 .Active {
