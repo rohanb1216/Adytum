@@ -45,16 +45,6 @@ body{
     border-color: darkgreen;
 }
 
-.room-button{
-    padding: 30px;
-    background-color:purple;    
-    border-radius: 5px;
-    
-    /* text-align: cener; */
-    /* height : 120px;x
-    width : 100px; */
-}
-
 .txt-white{
     font : 400 16px/1.5 Proxima Nova,proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 13px;
