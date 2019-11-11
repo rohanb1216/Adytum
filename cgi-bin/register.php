@@ -1,6 +1,6 @@
 
 <?php  
-include('addUser.php');
+include_once('addUser.php');
 // include('connect/mysqli_connect.php');
 ?>
 

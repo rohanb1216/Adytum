@@ -86,7 +86,8 @@ function register_user($username,$email,$password,$dbc){
     mysqli_query($dbc, $query); 
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
-    // header('location: index.php');
+    
+    header('location: ../views/home.html');
 
 }
 
