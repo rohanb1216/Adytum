@@ -1,6 +1,7 @@
 
 <?php  
 include('addUser.php');
+// include('connect/mysqli_connect.php');
 ?>
 
 <!DOCTYPE html>
