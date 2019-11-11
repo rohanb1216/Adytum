@@ -1,3 +1,4 @@
+<?php include_once('checkUser.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../css/login.css">
         <link rel="stylesheet" type="text/css" href="../css/general.css">
-        <!-- <link rel="stylesheet" type="text/css" href="../css/room.css"> -->
+        <link rel="stylesheet" type="text/css" href="../css/room.css">
         <script src="../src/login.js"></script>
 
 </head>
@@ -20,22 +21,22 @@
     </div>
 
   <form action = "../cgi-bin/login.php" method="POST" id ="login-form">
-
+    <?php include('errors.php'); ?>
     <div id="login">
         <h1 id = "login-text">Login</h1>
         <br>
         <label class="input">
-            <input type="text" id="username" placeholder="Username"/>
+            <input type="text" id="username" name = "username" placeholder="username"/>
         </label>
 
         <br><br>    
 
         <label class="input">
-            <input type="password" id="password" placeholder="Password"/>
+            <input type="password" id="password" name = "password" placeholder="password"/>
         </label>
 
         <br><br>
-        <input type="submit" value ="Login" name = "submit" class = "general-button">
+        <input type="submit" value ="Login" name = "login" class = "general-button">
     </div>
 
   </form>
