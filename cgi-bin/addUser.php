@@ -77,7 +77,7 @@ function register_user($username,$email,$password){
               
     $current_date = date('Y-m-d');
     
-    $query = "INSERT INTO users (id,username, email, password, date_created) 
+    $query = "INSERT INTO users (id,username, email, passwd, date_created) 
               VALUES('$username', '$email', '$password',$current_date);";
 
     mysqli_query($dbc, $query); 
@@ -109,8 +109,10 @@ if(isset($_POST['submit'])){
     //Adds all errors to their error arrays
     $form_errors = validate_form($username,$email,$password,$password_confirm);
     $data_errors = check_data_errors($username,$email,$password,$password_confirm);
- 
-    $name_errors = check_existing_username($username,$email);
+    if(empty($form_errors) && empty($data_errors)){
+        $name_errors = check_existing_username($username,$email);
+
+    }
     
     $errors = $form_errors;
     foreach($data_errors as $error){
