@@ -92,3 +92,9 @@ body{
     border-radius:4px ;
     text-align: left;
 }
+
+.tb{
+    height: 25px;
+    border-radius: 2px;
+    border-style: none;
+}
