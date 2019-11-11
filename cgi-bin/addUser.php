@@ -66,7 +66,7 @@ function check_existing_username($username,$email,$dbc){
         array_push($errors, "Username already exists");
       }
   
-      if ($user['email'] === $email) {
+      if ($user['email'] === $email && count($errors)!=1 ) {
         array_push($errors, "email already exists");
       }
     }
@@ -109,7 +109,9 @@ if(isset($_POST['submit'])){
     //Form validation time
     //Adds all errors to their error arrays
     $form_errors = validate_form($username,$email,$password,$password_confirm);
-    $data_errors = check_data_errors($username,$email,$password,$password_confirm);
+    if(empty($form_errors)){
+        $data_errors = check_data_errors($username,$email,$password,$password_confirm);
+    }
     if(empty($form_errors) && empty($data_errors)){
         $name_errors = check_existing_username($username,$email,$dbc);
 
