@@ -22,7 +22,7 @@
 }
 
 #navbar a:hover {
-    background-color: #353333;
+    background-color: #0270EE;
     color: rgb(255, 255, 255);
 }
 
@@ -31,11 +31,12 @@
     color: white;
 }
 body{
-    background: #121212;
+    background: #2c2b2b;
 }
 .general-button{
     padding: 8px;
-    background-color: greenyellow;
+    background-color: #0a02ee;
+    color: white;
     border-radius: 5px;
     text-align: center;
     height : 40px;
@@ -46,7 +47,7 @@ body{
 }
 
 .txt-white{
-    font : 400 16px/1.5 Proxima Nova,proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font : 400 16px/1.5 'Roboto', sans-serif;
     font-size: 13px;
     color : white;
 
@@ -66,7 +67,7 @@ body{
     position: absolute;
     top:25%;
     left: 37%;
-    background-color: rgb(66, 128, 209);
+    background-color: #0270EE;
     border-radius: 4px;
     padding-left: 4%;
     padding-right: 4%;
@@ -74,7 +75,7 @@ body{
     padding-top: 10px;
     border-style: none;
     border-width: 6px;
-    font : 400 13px/1.5 Proxima Nova,proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font : 400 13px/1.5 'Roboto', sans-serif;
 }
 
 .general-text{
@@ -105,7 +106,7 @@ body{
     background-color: rgb(252, 249, 249);
 }
 tb:focus{
-    border-color: rgb(66, 128, 209);
+    border-color: #0270EE;
     border-radius: 6px;
     border-style: solid;
 }
