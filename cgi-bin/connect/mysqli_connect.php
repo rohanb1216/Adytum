@@ -5,7 +5,7 @@
 // Defined as constants so that they can't be changed
 DEFINE ('DB_USER', 'root');
 //passwd
-    DEFINE ('DB_PASSWORD', '  ');
+    DEFINE ('DB_PASSWORD', NULL);
 DEFINE ('DB_HOST', 'localhost');
 DEFINE ('DB_NAME', 'adytum');
 

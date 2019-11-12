@@ -11,7 +11,7 @@ include_once('addUser.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../css/login.css">
         <link rel="stylesheet" type="text/css" href="../css/general.css">
-        <link rel="stylesheet" type="text/css" href="../css/room.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/room.css"> -->
         <script src="../src/login.js"></script>
 
 </head>
@@ -25,7 +25,7 @@ include_once('addUser.php');
         <img src="../images/logo.png" height="45" style="float: right" />    
     </div>
 
-    //username, password, confirm password, email
+    <!-- //username, password, confirm password, email -->
     <form method="POST" action = "../cgi-bin/register.php">
         <?php 
         include('errors.php'); 
