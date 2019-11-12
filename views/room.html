@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="../css/room.css">
     <link rel="stylesheet" href="../css/general.css">
     <script src="../src/room_class.js"></script>
+    <script src="../src/playerdata.js"></script>
+    <script src="../src/cipher.js"></script>
     <script>
+        var currRoom = "currRoom"
         var lroom = "lroomno";
         var rroom = "rroomno";
         var uroom = "uroomno";
@@ -22,7 +25,7 @@
     <img src="../images/logo.png" height="45" style="float: right" />
 
 </div>
-<button id="hide" class="general-button">^</button>
+<!-- <button id="hide" class="general-button">^</button> -->
 <br>
 <div class="room">
     <button class="room-button" onclick=travel(currRoom,uroom)>Go Up</button><br>
@@ -32,7 +35,11 @@
     <button onclick=travel(currRoom,droom) class="room-button bottom">Go Down</button>
 </div>
 <div id="puzzle" class="Inactive">
-    <iframe src="../puzzles/puzzle1.html"></iframe>
+    <div id="question" class="txt-white"></div>
+    <input type="text" id="answer" class="tb">
+    <button class="general-button" onclick="check()">Submit</button>
+    <br>
+    <label id="incorrect">Incorrect</label>
     <button onclick=hide(puzzle) class="closebtn"></button>
 </div>
 
