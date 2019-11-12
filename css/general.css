@@ -31,7 +31,7 @@
     color: white;
 }
 body{
-    background: #121212
+    background: #121212;
 }
 .general-button{
     padding: 8px;
@@ -66,13 +66,13 @@ body{
     position: absolute;
     top:25%;
     left: 37%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(66, 128, 209);
     border-radius: 4px;
     padding-left: 4%;
     padding-right: 4%;
-    padding-bottom: 3%;
-    padding-top: 1%;
-    border-style: ridge;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-style: none;
     border-width: 6px;
     font : 400 13px/1.5 Proxima Nova,proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
@@ -88,7 +88,7 @@ body{
 
 .lbl{
     background: rgb(46, 46, 46);
-    padding: 4px;
+    padding: 8px;
     border-radius:4px ;
     text-align: left;
 }
@@ -100,7 +100,12 @@ body{
     border-style: none;
     border-radius: 6px;
     border-color: rgb(77, 6, 71);
-    border-style: solid;
+    border-style: none;
     padding: 8px;
     background-color: rgb(252, 249, 249);
+}
+tb:focus{
+    border-color: rgb(66, 128, 209);
+    border-radius: 6px;
+    border-style: solid;
 }
