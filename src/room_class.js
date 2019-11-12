@@ -31,16 +31,14 @@ function solved(currRoom) {
 
 function hide(element) {
     var ele = document.getElementById(element);
-    if (ele.classList[0] == "Active") {
-        ele.classList.replace("Active", "Inactive");
-        console.log(ele.style.display);
-    }
-    else {
-        if (ele.classList[0] == "Inactive") {
-            ele.classList.replace("Inactive", "Active");
-            console.log(ele.style.display);
-        }
-    }
+    ele.classList.toggle("Active");
+    ele.classList.toggle("Inactive");
+    // if(ele.style.opacity==0){
+    //     ele.style.display="none";
+    // }
+    // else{
+    //     ele.style.display="block";
+    // }
 }
 
 window.onload=function(){
