@@ -94,8 +94,13 @@ body{
 }
 
 .tb{
-    height: 25px;
+    height: 15px;
     width: 200px;
     border-radius: 2px;
     border-style: none;
+    border-radius: 6px;
+    border-color: rgb(77, 6, 71);
+    border-style: solid;
+    padding: 8px;
+    background-color: rgb(252, 249, 249);
 }
