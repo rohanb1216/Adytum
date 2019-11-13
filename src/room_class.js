@@ -1,11 +1,7 @@
 var puzzle="puzzle";
 class roomclass {
     constructor(puzzleType, special,page) {
-        this.state = false;
-        this.puzzle = puzzleType;
-        this.type = special;
         this.code = "";
-        this.page=page;
     }
     codeGenerate() {
         var str = '';
