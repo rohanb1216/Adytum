@@ -17,7 +17,7 @@ class roomclass {
 }
 function travel(currRoom, nextRoom) {
     if (room[currRoom] || room[nextRoom]) {
-        window.location.href = "../views/"+currRoom+".html";
+        window.location.href = "../views/"+nextRoom+".html";
     }
 }
 function solved(currRoom) {

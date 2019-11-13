@@ -27,7 +27,8 @@ body {
     background-repeat: no-repeat;
     height: 90vh;
     width: 62.775vw;
-    border-radius: 2px;
+    border-radius: 4px;
+    border-style: none;
     position: absolute;
     left: 18vw;
 }
