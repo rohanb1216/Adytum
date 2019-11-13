@@ -2,12 +2,12 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/login.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/general.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../css/room.css"> -->
-    <script src="../src/login.js"></script>
+    <!-- <script src="../src/login.js"></script> -->
 
 </head>
 
@@ -21,7 +21,7 @@
         <img src="../images/logo.png" height="45" style="float: right" />
     </div>
 
-    //username, password, confirm password, email
+    <!-- //username, password, confirm password, email -->
     <form method="POST" action="../cgi-bin/register.php">
         <div id="reg-screen" class="form-layout">
             <h1>
@@ -31,32 +31,29 @@
             <div class="lbl">
                 <label class="txt-white">Username</label>
                 <br>
-                <input type="text" id="reg-username" name="username" class="tb" placeholder="Enter a username"
-                    class="general-text">
-                </label>
+                <input type="text" id="reg-username" name="username" class="tb" placeholder="Enter a username">
             </div>
             <br>
             <div class="lbl">
                 <label class="txt-white">Email address</label>
                 <br>
-                <input type="email" id="reg-email" name="email" class="tb" placeholder="Enter your email address"
-                    class="general-text">
-                </div>
-                <br>
+                <input type="email" id="reg-email" name="email" class="tb" placeholder="Enter your email address">
+            </div>
+            <br>
             <div class="lbl">
                 <label class="txt-white">Password</label>
                 <br>
                 <input type="password" id="reg-password" name="password" class="tb" placeholder="Create a password"
                     class="general-text">
-                </div>
-                <br>
+            </div>
+            <br>
             <div class="lbl">
                 <label class="txt-white">Re-enter Password</label>
                 <br>
-                <input type="password" id="reg-password-confirm" name="password-confirm" class="tb" placeholder="Re-enter password"
-                    class="general-text">
-                </div>
-                <br>
+                <input type="password" id="reg-password-confirm" name="password-confirm" class="tb"
+                    placeholder="Re-enter password" class="general-text">
+            </div>
+            <br>
 
             <input type="submit" value="Sign Up" name="submit" class="general-button">
         </div>

@@ -34,14 +34,15 @@ body {
 
 .room button {
     padding: 3px;
-    background-color:purple;    
+    color: white;
+    background-color:#1270EB;    
     border-radius: 5px;
     border-style: solid;
-    border-color: darkviolet;
+    border-color: #1270EB;
 }
 .room button:hover{
-    background-color:darkslateblue ;
-    transition: background-color 1s;
+    background-color:#0091ff ;
+    transition: background-color 0.5s;
 }
 
 .bottom {
@@ -77,6 +78,7 @@ body {
     text-align: center;
     z-index: 1;
     transition: 0.5s;
+    border-radius: 4px;
 }
 
 iframe {
@@ -95,13 +97,13 @@ iframe {
     font-size: 20px;
     height: 30px;
     width: 30px;
-    background-color:red ;
-    border-radius: 7px;
+    background-color:#F44336;
+    border-radius: 25px;
     border-style: solid;
-    border-color: darkred ;
+    border-color: #F44336;
 }
 .closebtn:hover{
-    background-color: rgb(172, 4, 4);
+    background-color: #E53935;
     transition: background-color 1s;
 }
 .closebtn:before{
