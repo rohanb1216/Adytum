@@ -76,8 +76,7 @@ function check_existing_username($username,$email,$dbc){
 function register_user($username,$email,$password,$dbc){
     $password = md5($password);//encrypt the password before saving in the database
 
-
-              
+          
     $current_date = date('Y-m-d');
     
     $query = "INSERT INTO users (user_id,username, password, email, date_created) 
