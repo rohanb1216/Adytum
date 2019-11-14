@@ -34,7 +34,6 @@ function check_user($username,$password,$dbc){
 // echo "login : ".$_POST['login']." username : ".$_POST['username']." password :".$_POST['password'];
 
 if (isset($_POST['login'])) {
-    echo "login";
     $username = mysqli_real_escape_string($dbc, $_POST['username']);
     $password = mysqli_real_escape_string($dbc, $_POST['password']);
     $username_errors = array();
@@ -48,7 +47,6 @@ if (isset($_POST['login'])) {
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
         echo "You are now logged in : ";  
-        echo $_SESSION['username'];
   	    header('location: ../views/home.html');
     }
     $errors = $processing_errors;
