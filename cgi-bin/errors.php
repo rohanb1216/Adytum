@@ -1,7 +1,7 @@
 <?php  if (count($errors) > 0) : ?>
   <div class="error">
   	<?php foreach ($errors as $error) : ?>
-  	  <p class = 'txt-white'><?php echo $error; ?></p>
+  	  <div class = 'general-error'><?php echo $error; ?></div>
   	<?php endforeach ?>
   </div>
 <?php  endif ?>
