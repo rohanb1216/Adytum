@@ -23,11 +23,13 @@ function check() {
         solved(currRoom);
         alert("solved");
         document.getElementById("incorrect").value="Correct";
+        document.getElementById("answer").classList.remove(".incorrect");
         hide("puzzle");
     }
     else{
         alert("incorrect");
         console.log(question);
+        document.getElementById("answer").classList.add(".incorrect");
     }
 }
 

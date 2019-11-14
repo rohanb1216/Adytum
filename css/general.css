@@ -132,3 +132,7 @@ tb:focus{
     padding : 5px;
     border-width: 1px;
 }
+.incorrect{
+    border-color: red;
+    border-width: 3px;
+}

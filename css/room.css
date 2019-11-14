@@ -33,17 +33,17 @@ body {
     left: 18vw;
 }
 
-.room button {
+.room-button {
     padding: 0px;
     width: 40px;
     height: 40px;
     /* color: white; */
-    background-color:rgba(0, 177, 186, 0.767);    
+    background-color:#0270eec2;    
     border-radius: 20px;
     border-style: solid; 
-    border-color: #00B1BA;
+    border-color: #0270EE;
 }
-.room button:hover{
+.room-button:hover{
     background-color:#0091ff ;
     transition: background-color 0.5s;
 }
