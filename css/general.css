@@ -24,12 +24,12 @@
     border-radius: 4px;
     background-color: rgb(41, 41, 53);
 }
-.navbar-custom a:hover {
+.navbar-custom li:hover {
     background-color: #0270EE;
     color: rgb(255, 255, 255);
 }
 
-.navbar-custom a.active {
+.navbar-custom li.active {
     background-color: #2e2e2e;
     color: white;
 }
@@ -79,7 +79,7 @@ body{
     border-radius: 4px;
     padding-left: 4%;
     padding-right: 4%;
-    padding-bottom: 10px;
+    padding-bottom: 2%;
     padding-top: 10px;
     border-style: none;
     border-width: 6px;
@@ -118,4 +118,17 @@ tb:focus{
     border-color: #0270EE;
     border-radius: 4px;
     border-style: solid;
+}
+
+.general-error{
+    border-style: solid;
+    border-color: red;
+    border-radius: 3px;
+    align-content: center;
+    position: absolute;
+    top : 20%;
+    left : 38.5%;
+    color : whitesmoke;
+    padding : 5px;
+    border-width: 1px;
 }
