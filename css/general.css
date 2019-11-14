@@ -24,12 +24,12 @@
     border-radius: 4px;
     background-color: rgb(41, 41, 53);
 }
-.navbar-custom a:hover {
+.navbar-custom li:hover {
     background-color: #0270EE;
     color: rgb(255, 255, 255);
 }
 
-.navbar-custom a.active {
+.navbar-custom li.active {
     background-color: #2e2e2e;
     color: white;
 }
