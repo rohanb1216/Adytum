@@ -31,6 +31,7 @@ function check_user($username,$password,$dbc){
     return $errors; 
 
 }
+// echo "login : ".$_POST['login']." username : ".$_POST['username']." password :".$_POST['password'];
 
 if (isset($_POST['login'])) {
     echo "login";
@@ -43,11 +44,11 @@ if (isset($_POST['login'])) {
         $username_errors = check_user($username,$password,$dbc);
     }
 
-    if(count($username_errors) == 0){
+    if(count($username_errors) == 0 && count($processing_errors) == 0){
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
         echo "You are now logged in";  
-  	    header('location: ../views/home.phtml');
+  	    header('location: ../views/home.html');
     }
     $errors = $processing_errors;
     if(empty($processing_errors)){

@@ -15,7 +15,7 @@
 
 <body>
 
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
+    <!-- <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="navbar-brand" href="#">
@@ -35,7 +35,7 @@
                 <a href="about.html" class="nav-link">About</a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
 
     <form action="../cgi-bin/login.php" method="POST" id="login-form">
         <?php include('errors.php'); ?>
@@ -47,7 +47,7 @@
             <div class="lbl">
                 <label class="txt-white">Username</label>
                 <br>
-                <input type="text" id="username" class="tb" placeholder="username" />
+                <input type="text" id="username" class="tb" placeholder="username" name = "username">
             </div>
             <br>
             <div class="lbl">
@@ -56,7 +56,7 @@
                 <input type="password" id="password" name="password" class="tb" placeholder="Password" class="general-text">
             </div>
             <br>
-            <input type="submit" value="LOGIN" name="login" class="general-button">
+            <input type="submit" value="Login" name="login" class="general-button">
         </div>
 
     </form>
