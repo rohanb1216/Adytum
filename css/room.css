@@ -50,15 +50,17 @@ body {
 
 .bottom {
     position: absolute;
-    bottom: 8px;
+    bottom: 10px;
     left: 48%;
+    transform: rotate(0.25turn);
 }
 
 .left {
     position: absolute;
-    top: 45vh;
-    left: 0px;
-    transform: rotate(0.25turn);
+    top: 43vh;
+    left: 43px;
+    padding: 0px;
+    transform: rotate(0.5turn);
 }
 
 .right {
