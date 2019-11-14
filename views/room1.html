@@ -56,11 +56,19 @@
     <br>
     <br>
     <div class="room">
-        <button class="room-button" onclick=travel(currRoom,uroom)>Go Up</button><br>
-        <button onclick=travel(currRoom,lroom) class="room-button left">Go Left</button>
+        <button class="room-button" onclick=travel(currRoom,uroom)>
+            <img src="../images/arrow_right.png" height="12.5" width="12.5">
+        </button><br>
+        <button onclick=travel(currRoom,lroom) class="room-button left">
+            <img src="../images/arrow_right.png" height="12.5" width="12.5">
+        </button>
         <button onclick=hide(puzzle) class="room-button showPuzzle">Show Puzzle</button>
-        <button onclick=travel(currRoom,rroom) class="room-button right">Go Right</button><br>
-        <button onclick=travel(currRoom,droom) class="room-button bottom">Go Down</button>
+        <button onclick=travel(currRoom,rroom) class="room-button right">
+            <img src="../images/arrow_right.png" height="12.5" width="12.5">
+        </button><br>
+        <button onclick=travel(currRoom,droom) class="room-button bottom">
+            <img src="../images/arrow_right.png" height="12.5" width="12.5">
+        </button>
     </div>
     <div id="puzzle" class="Inactive">
         <div id="question" class="txt-white"></div>
