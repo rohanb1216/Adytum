@@ -23,6 +23,7 @@ function check() {
         solved(currRoom);
         console.log("solved");
         document.getElementById("incorrect").value="Correct";
+        hide("puzzle");
     }
     else{
         console.log("incorrect");
