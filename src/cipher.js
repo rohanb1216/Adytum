@@ -21,12 +21,12 @@ function check() {
     console.log(currRoom);
     if (answer == question) {
         solved(currRoom);
-        console.log("solved");
+        alert("solved");
         document.getElementById("incorrect").value="Correct";
         hide("puzzle");
     }
     else{
-        console.log("incorrect");
+        alert("incorrect");
         console.log(question);
     }
 }
