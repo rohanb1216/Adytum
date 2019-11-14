@@ -15,7 +15,7 @@
 
 <body>
 
-    <!-- <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="navbar-brand" href="#">
@@ -35,7 +35,7 @@
                 <a href="about.html" class="nav-link">About</a>
             </li>
         </ul>
-    </nav> -->
+    </nav>
 
     <form action="../cgi-bin/login.php" method="POST" id="login-form">
         <?php include('errors.php'); ?>
