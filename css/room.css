@@ -52,7 +52,6 @@ body {
     position: absolute;
     bottom: 10px;
     left: 48%;
-    transform: rotate(0.25turn);
 }
 
 .left {
@@ -60,7 +59,6 @@ body {
     top: 43vh;
     left: 43px;
     padding: 0px;
-    transform: rotate(0.5turn);
 }
 
 .right {
@@ -68,7 +66,6 @@ body {
     top: 43vh;
     right: 43px;
     padding: 0px;
-    /* transform: rotate(0.75turn); */
 }
 
 .showPuzzle {
