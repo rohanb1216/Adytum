@@ -87,6 +87,7 @@ body {
     z-index: 1;
     transition: 0.5s;
     border-radius: 4px;
+    vertical-align: 50%;
 }
 
 iframe {
