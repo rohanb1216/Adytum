@@ -43,7 +43,7 @@ body{
     color: white;
     border-radius: 5px;
     text-align: center;
-    height : 30px;
+    height : 35px;
     width : 120px;
     border : solid;
     border-style: solid;
@@ -58,15 +58,17 @@ body{
     font : 400 16px/1.5 'Roboto', sans-serif;
     font-size: 13px;
     color : white;
-
 }
 
 #pyramid-home{
-    background-image: url("../images/pyramid_top_view.jpeg");
+    /* background-image: url("../images/bg.png");
     background-repeat: no-repeat;
-    max-width: 200%;
-    height:auto;
-
+    /* max-width: 90%; */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .form-layout{
@@ -135,4 +137,10 @@ tb:focus{
 .incorrect{
     border-color: red;
     border-width: 3px;
+}
+
+#get-started{
+    position: absolute;
+    top: 60%;
+    left: 45%;
 }
