@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if($_SESSION == NULL){
+if($_SESSION['username'] == NULL){
     echo "Login";
 }
 else{
