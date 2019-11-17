@@ -7,58 +7,81 @@ include_once('addUser.php');
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" type="text/css" href="../css/login.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/general.css">
     <!-- <script src="../src/login.js"></script> -->
+
 </head>
 
 <body>
 
-    <div id="navbar">
-        <a href="home.html">Home</a>
-        <a href="leaderboard.html">Leaderboard</a>
-        <a href="FAQ.html">FAQ</a>
-        <a href="about.html">About</a>
-        <img src="../images/logo.png" height="45" style="float: right" />
-    </div>
+<nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logo.png" height="30" class="d-inline-block align-top" alt="">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="home.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+                <a href="FAQ.html" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+            </li>
+        </ul>
 
-    <!-- //username, password, confirm password, email -->
+    </nav>
+
     <form method="POST" action="../cgi-bin/register.php">
         <?php
         include('errors.php');
         ?>
 
-        <div id="reg-screen" class="form-layout">
-            <h1>
-                <label class="txt-white">Sign up</label>
-            </h1>
-            <br>
+     <div id="reg-screen" class="form-layout">
+        <h1>
+            <label class="txt-white heading">Sign up</label>
+        </h1>
+        <br>
+        <div class="lbl">
             <label class="txt-white">Username</label>
             <br>
-            <input type="text" id="reg-username" name="username" placeholder="Enter a username" class="general-text" value="<?php echo $username; ?>">
-            <br><br>
-
+            <input type="text" id="reg-username" name="username" class="tb" placeholder="Enter a username">
+        </div>
+        <br>
+        <div class="lbl">
             <label class="txt-white">Email address</label>
             <br>
-            <input type="email" id="reg-email" name="email" placeholder="Enter your email address" class="general-text" value="<?php echo $email; ?>">
-            <br><br>
-
+            <input type="email" id="reg-email" name="email" class="tb" placeholder="Enter your email address">
+        </div>
+        <br>
+        <div class="lbl">
             <label class="txt-white">Password</label>
             <br>
-            <input type="password" id="reg-password" name="password" placeholder="Create a password" class="general-text">
-            <br><br>
-
+            <input type="password" id="reg-password" name="password" class="tb" placeholder="Create a password"
+                class="general-text">
+        </div>
+        <br>
+        <div class="lbl">
             <label class="txt-white">Re-enter Password</label>
             <br>
-            <input type="password" id="reg-password-confirm" name="password_confirm" placeholder="Re-enter password" class="general-text">
-            <br><br>
-
-            <input type="submit" value="Sign Up" name="submit" class="general-button">
+            <input type="password" id="reg-password-confirm" name="password_confirm" class="tb"
+                placeholder="Re-enter password" class="general-text">
         </div>
+        <br>
+
+        <input type="submit" value="Sign Up" name="submit" class="general-button">
+    </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

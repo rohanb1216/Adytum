@@ -86,7 +86,7 @@ function register_user($username,$email,$password,$dbc){
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
     
-    header('location: ../views/home.phtml');
+    header('location: ../views/home.html');
 
 }
 
