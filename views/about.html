@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../css/room.css">
     <link rel="stylesheet" type="text/css" href="../css/general.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
 </head>
 
@@ -40,6 +41,14 @@
                 <a href="about.html" class="nav-link">About</a>
             </li>
         </ul>
+        <div class="dropdown">
+                <button class="dropbtn"> <img src= '../images/user.png' class = 'dropdown-image' '></button>
+                <div class="dropdown-content">
+                  <p><?php include_once('../cgi-bin/display_user.php'); ?></p>
+                  <a href="#">Link 2</a>
+                </div>
+        </div> 
+
     </nav>
     <br><br>
     <!-- <h1 class="overview-title"> About </h1> -->
