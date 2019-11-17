@@ -39,6 +39,15 @@
                 <a href="about.html" class="nav-link">About</a>
             </li>
         </ul>
+        <div class="dropdown">
+                <button class="dropbtn"> <img src= '../images/user.png' class = 'dropdown-image'></button>
+                <div class="dropdown-content">
+                  <p class = 'txt-white'><?php include_once('../cgi-bin/display_user.php'); ?></p>
+                  <form action = "../cgi-bin/linout.php" method = "POST">
+                    <input type="submit" name = "login-logout-btn" value = " <?php include_once('../cgi-bin/login_value.php'); ?> ">
+                  </form>
+                </div>
+        </div> 
     </nav>
     <br>
     <br>
