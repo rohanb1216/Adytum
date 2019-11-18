@@ -256,3 +256,22 @@ tb:focus{
   .register-box input[type = "submit"]:hover{
     background: #2ecc71;
   }
+
+  .puzzleBox {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .puzzleBox:hover {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.25s;
+  }

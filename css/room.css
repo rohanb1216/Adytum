@@ -74,11 +74,11 @@ body {
 }
 
 #puzzle {
-    height: 90vh;
-    width: 62.775vw;
+    height: 88vh;
+    width: 60.1vw;
     position: absolute;
-    top: 11.5vh;
-    left: 18vw;
+    top: 9.8vh;
+    left: 19.3875vw;
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     z-index: 1;

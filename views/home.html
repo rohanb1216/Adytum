@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="navbar-brand" href="#">
@@ -42,13 +42,17 @@
             </li>
         </ul>
         <div class="dropdown">
-                <button class="dropbtn"> <img src= '../images/user.png' class = 'dropdown-image'></button>
-                <div class="dropdown-content">
-                  <p class = 'txt-white'><?php include_once('../cgi-bin/display_user.php'); ?></p>
-                  <form action = "../cgi-bin/linout.php" method = "POST">
+            <button class="dropbtn"> <img src= '../images/user.png' class = 'dropdown-image'> </button>
+            <div class="dropdown-content">
+                <p class = 'txt-white'>
+                    <?php
+                        include_once('../cgi-bin/display_user.php');
+                    ?>
+                </p>
+                <form action = "../cgi-bin/linout.php" method = "POST">
                     <input type="submit" name = "login-logout-btn" value = " <?php include_once('../cgi-bin/login_value.php'); ?> ">
-                  </form>
-                </div>
+                </form>
+            </div>
         </div> 
     </nav>
     <br>
