@@ -47,7 +47,7 @@
         </div> 
     </nav>
 
-    <form action="../cgi-bin/login.php" method="POST" id="login-form">
+    <!-- <form action="../cgi-bin/login.php" method="POST" id="login-form">
 
         <div id="login" class="form-layout">
             <h1>
@@ -70,7 +70,15 @@
             <input type="submit" value="LOGIN" name="submit" class="general-button">
         </div>
 
+    </form> -->
+
+    <form action="../cgi-bin/login.php" method="POST" class="box">
+        <h1>Login</h1>
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="login" placeholder="Login">
     </form>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
