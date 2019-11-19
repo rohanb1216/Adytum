@@ -1,5 +1,5 @@
 
-function errorHandler(error){
+function RegErrorHandler(error){
     var usernamebox = document.getElementById("reg-username");
     var emailbox = document.getElementById("reg-email");
     var passbox = document.getElementById('reg-password');
@@ -27,4 +27,18 @@ function errorHandler(error){
 
 }
 
-errorHandler(error);
+function loginErrorHandler(error){
+    var usernamebox = document.getElementById("login-username");
+    var passwordbox = document.getElementById("login-password");
+    
+    if(error == "Username is required" || error == "Wrong username/password combination"){
+        usernamebox.style.borderColor = 'red';
+        usernamebox.placeholder = error;
+    }
+
+    if(error == "Password is required" || error == "Wrong username/password combination"){
+        passwordbox.style.borderColor = 'red';
+        passwordbox.placeholder = error;
+    }
+
+}

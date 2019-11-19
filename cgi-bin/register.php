@@ -53,7 +53,7 @@ include_once('addUser.php');
         <input type="submit" name="submit" value="Sign Up">
 
     </form>
-    <?php include('errors.php'); ?>
+    <?php include('regerrors.php'); ?>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
