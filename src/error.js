@@ -9,7 +9,6 @@ function RegErrorHandler(error){
     || error =="Username can't contain special symbols " || error == 'Username already exists' ){
         usernamebox.style.borderColor = 'red';
         usernamebox.placeholder = error;
-
     }
     if(error =='Email is required' || error == 'Invalid e-mail format '
     || error =='email already exists'){

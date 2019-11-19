@@ -15,6 +15,14 @@ class roomclass {
         this.code = str;
     }
 }
+
+function assignPlayer(playerobj){
+    var username = document.getElementById("dropdownMenuButton");
+    playerobj.username = username.innerText;
+
+
+}
+
 function travel(currRoom, nextRoom) {
     if (room[currRoom] || room[nextRoom]) {
         window.location.href = "../views/"+nextRoom+".html";
@@ -46,3 +54,14 @@ function hide(element) {
 room1 = new roomclass("cipher", false, "roomno");
 room1.codeGenerate();
 console.log(room1.code);
+
+var player = {
+    username : "",
+    //This consists of boolean values of which rooms are unlocked and which aren't
+    //The room no. is mapped to the index of this array. 0 signifies starting room and 15 signifies ending room 
+    roomUnlockStatus : [],
+    currRoom : 0,
+    timeElasped : 0,
+    
+
+};
