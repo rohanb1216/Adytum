@@ -19,7 +19,7 @@
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
-    position: relative; 
+    position: absolute; 
     top : 58px;
     left:10px;
     background-color: rgb(59, 59, 59);

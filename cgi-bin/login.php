@@ -38,6 +38,8 @@
     </nav>
 
     <form action="../cgi-bin/login.php" method="POST" class="login-box">
+        <?php include('errors.php'); ?>
+
         <h1>Sign in</h1>
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">

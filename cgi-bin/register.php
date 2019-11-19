@@ -44,14 +44,18 @@ include_once('addUser.php');
     </nav>
 
     <form method="POST" action="../cgi-bin/register.php" class="register-box">
+
         <h1>Sign up</h1>
         <input type="text" id="reg-username" name="username" placeholder="Enter a username">
         <input type="email" id="reg-email" name="email" placeholder="Enter your email address">
         <input type="password" id="reg-password" name="password" placeholder="Create a password">
         <input type="password" id="reg-password-confirm" name="password_confirm" placeholder="Re-enter password">
-        <input type="submit" name="login" placeholder="Login">
+        <input type="submit" name="submit" value="Sign Up">
+
     </form>
-    
+    <?php include('errors.php'); ?>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

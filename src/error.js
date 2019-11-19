@@ -1,0 +1,30 @@
+
+function errorHandler(error){
+    var usernamebox = document.getElementById("reg-username");
+    var emailbox = document.getElementById("reg-email");
+    var passbox = document.getElementById('reg-password');
+    var passboxconfirm = document.getElementById('reg-password-confirm');
+
+    if(error == 'Username is required' || error =='Username must be in between 7 and 21 characters ' 
+    || error =="Username can't contain special symbols " || error == 'Username already exists' ){
+        usernamebox.style.borderColor = 'red';
+        usernamebox.placeholder = error;
+
+    }
+    if(error =='Email is required' || error == 'Invalid e-mail format '
+    || error =='email already exists'){
+        emailbox.style.borderColor = 'red';
+        emailbox.placeholder = error;
+    }
+    if(error == 'Password is required' ||error =='The two passwords do not match'
+    ||error == "Password must be more than 6 characters"){
+        passbox.style.borderColor = 'red';
+        passboxconfirm.style.borderColor = 'red';
+
+        passbox.placeholder = error;
+        passboxconfirm.placeholder = error;
+    }
+
+}
+
+errorHandler(error);
