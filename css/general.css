@@ -11,7 +11,7 @@ body{
 .navbar {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
     background-color: rgba(255,255,255,0.06);
     height: 50px;
     font-family: sans-serif;
@@ -107,6 +107,15 @@ body{
     border : solid;
     border-style: solid;
     border-color: #1270EB;
+}
+
+.no-button{
+  background-color: inherit;
+  color: black;
+  text-align: left;
+  border-style: hidden;
+  border: hidden;
+  width: 10em;
 }
 
 .general-button:hover{
@@ -233,7 +242,7 @@ tb:focus{
     border-radius: 40px;
     transition: 0.25s;
   }
-  .register-box input[type = "text"]:focus, register-box input[type = "email"]:focus, .register-box input[type = "password"]:focus{
+  .register-box input[type = "text"]:focus, .register-box input[type = "email"]:focus, .register-box input[type = "password"]:focus{
     background-color: rgba(255,255,255,0.06);
     width: 300px;
     border-color: #2ecc71;
