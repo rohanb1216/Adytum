@@ -21,10 +21,10 @@ function validate_form($username,$email,$password,$password_confirm){
     if (empty($password)) { array_push($errors, "Password is required"); }
 
     if ($password != $password_confirm) {
-        echo "password1 : ".$password;
-        echo "password2 : ".$password_confirm;
+        // echo "password1 : ".$password;
+        // echo "password2 : ".$password_confirm;
 
-        array_push($errors, "The two passwords do not match");
+        array_push($errors, "Passwords do not match");
     }
 
     return $errors;

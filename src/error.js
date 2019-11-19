@@ -16,7 +16,7 @@ function errorHandler(error){
         emailbox.style.borderColor = 'red';
         emailbox.placeholder = error;
     }
-    if(error == 'Password is required' ||error =='The two passwords do not match'
+    if(error == 'Password is required' ||error =='Passwords do not match'
     ||error == "Password must be more than 6 characters"){
         passbox.style.borderColor = 'red';
         passboxconfirm.style.borderColor = 'red';
