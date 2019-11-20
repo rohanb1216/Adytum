@@ -79,12 +79,32 @@ function register_user($username,$email,$password,$dbc){
           
     $current_date = date('Y-m-d');
     
+    $default_data = '{
+        "room1": false,
+        "room2": false,
+        "room3": false,
+        "room4":false,
+        "PlayerRoom": "room1",
+        "codes": {
+          "room1": "ab",
+          "room2": "23",
+          "room3": "c3",
+          "room4": "12"
+        }
+      }';
+    
+
     $query = "INSERT INTO users (user_id,username, password, email, date_created) 
               VALUES(NULL, '$username', '$password','$email','$current_date');";
 
+    $query_json = "INSERT INTO player_data VALUES('$username','$default_data');";
+
     mysqli_query($dbc, $query); 
+    mysqli_query($dbc, $query_json); 
+
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
+    $_SESSION['user_data'] = $default_data;
     
     header('location: ../views/home.html');
 
