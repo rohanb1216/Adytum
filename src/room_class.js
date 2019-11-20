@@ -58,15 +58,8 @@ room1 = new roomclass("cipher", false, "roomno");
 room1.codeGenerate();
 console.log(room1.code);
 
-var player = {
-    username : "",
-    //This consists of boolean values of which rooms are unlocked and which aren't
-    //The room no. is mapped to the index of this array. 0 signifies starting room and 15 signifies ending room 
-    roomUnlockStatus : [],
-    currRoom : 0,
-    timeElasped : 0,
-    
-
-};
-
+var player;
+$.get("get_player_data.php", function(data){
+    player = JSON.parse(data);
+});
 
