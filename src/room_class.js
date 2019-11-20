@@ -58,9 +58,5 @@ room1 = new roomclass("cipher", false, "roomno");
 room1.codeGenerate();
 console.log(room1.code);
 
-var player;
-$.get("get_player_data.php", function(data){
-    player = JSON.parse(data);
-});
-console.log(player);
+
 

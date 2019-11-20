@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
+    <script src="../src/room_class.js"></script>
+    <script src="../src/playerdata.js"></script>
+    <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "currRoom"
         var lroom = "lroomno";
         var rroom = "rroomno";
         var uroom = "uroomno";
         var droom = "droomno"; //change string accoding to map
-        </script>
+    </script>
 </head>
 
 <body>
@@ -28,7 +31,7 @@
         <a href="FAQ.html" class="nav-item nav-link">FAQ</a>
         <a href="about.html" class="nav-item nav-link">About</a>
         <img src="../images/logo.png" height="45" style="float: right" />
-        
+
     </nav> -->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <ul class="navbar-nav">
@@ -51,13 +54,15 @@
             </li>
         </ul>
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php include_once('../cgi-bin/display_user.php'); ?>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <form action = "../cgi-bin/linout.php" method = "POST">
-                    <input type="submit" class ="no-button" name = "login-logout-btn" value = " <?php include_once('../cgi-bin/login_value.php'); ?> ">
-                </form>                  
+                <form action="../cgi-bin/linout.php" method="POST">
+                    <input type="submit" class="no-button" name="login-logout-btn"
+                        value=" <?php include_once('../cgi-bin/login_value.php'); ?> ">
+                </form>
             </div>
         </div>
     </nav>
@@ -65,20 +70,20 @@
     <br>
     <br>
     <div class="room"><button class="room-button" onclick=travel(currRoom,uroom)>
-        <img src="../images/arrow_up.png" height="12.5" width="12.5">
-    </button><br>
-    <button onclick=travel(currRoom,lroom) class="room-button left">
-        <img src="../images/arrow_left.png" height="12.5" width="12.5">
-    </button>
-    <!-- class="general-button showPuzzle" -->
-    <button onclick=hide(puzzle) title="Click to view puzzle">
-        <img src="../images/puzzlebox.png" alt="Click to view puzzle" height="135" class="puzzleBox">
-    </button>
-    <button onclick=travel(currRoom,rroom) class="room-button right">
-        <img src="../images/arrow_right.png" height="12.5" width="12.5">
-    </button><br>
-    <button onclick=travel(currRoom,droom) class="room-button bottom">
-        <img src="../images/arrow_down.png" height="12.5" width="12.5">
+            <img src="../images/arrow_up.png" height="12.5" width="12.5">
+        </button><br>
+        <button onclick=travel(currRoom,lroom) class="room-button left">
+            <img src="../images/arrow_left.png" height="12.5" width="12.5">
+        </button>
+        <!-- class="general-button showPuzzle" -->
+        <button onclick=hide(puzzle) title="Click to view puzzle">
+            <img src="../images/puzzlebox.png" alt="Click to view puzzle" height="135" class="puzzleBox">
+        </button>
+        <button onclick=travel(currRoom,rroom) class="room-button right">
+            <img src="../images/arrow_right.png" height="12.5" width="12.5">
+        </button><br>
+        <button onclick=travel(currRoom,droom) class="room-button bottom">
+            <img src="../images/arrow_down.png" height="12.5" width="12.5">
         </button>
     </div>
     <div id="puzzle" class="Inactive">
@@ -93,16 +98,19 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="../src/room_class.js"></script>
-    <script src="../src/playerdata.js"></script>
-    <script src="../src/cipher.js"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script>
+        var player;
+        $.get("get_player_data.php", function (data) {
+            player = JSON.parse(data);
+        });
+        console.log(player);</script>
 </body>
 
 </html>
