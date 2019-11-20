@@ -1,3 +1,18 @@
+var room;
+// var request = $.get("../cgi-bin/get_player_data.php", function (data) {
+//     console.log(JSON.parse(data));
+//     return data;
+// });
+$.ajax({
+    url:"../cgi-bin/get_player_data.php",
+    type:"GET",
+    async:false,
+    success:function(data){
+        room=JSON.parse(data);
+    }
+});
+// console.log(request);
+console.log(room);
 var puzzle="puzzle";
 
 
@@ -18,13 +33,13 @@ class roomclass {
     }
 }
 
-function assignPlayer(playerobj){
-    var username = document.getElementById("dropdownMenuButton");
-    playerobj.username = username.innerText;
-    // for(let i =0 ;i<)
-    // roomUnlockStatus = []
+// function assignPlayer(playerobj){
+//     var username = document.getElementById("dropdownMenuButton");
+//     playerobj.username = username.innerText;
+//     // for(let i =0 ;i<)
+//     // roomUnlockStatus = []
 
-}
+// }
 
 function travel(currRoom, nextRoom) {
     if (room[currRoom] || room[nextRoom]) {
@@ -42,9 +57,6 @@ function hide(element) {
     ele.classList.toggle("Inactive");
 }
 
-$.get("../cgi-bin/get_player_data.php", function (data) {
-    console.log(JSON.parse(data));
-});
 
 room1 = new roomclass("cipher", false, "roomno");
 room1.codeGenerate();
