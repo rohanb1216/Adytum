@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once('connect/mysqli_connect.php');
+require_once('../connect/mysqli_connect.php');
 $errors = array();
 
 function process_user(&$username,&$password){
