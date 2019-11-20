@@ -106,8 +106,8 @@
         </script>
     <script>
         var player;
-        $.get("get_player_data.php");
-        $.get("get_player_data.php", function (data) {
+        // $.get("get_player_data.php");
+        $.get("../cgi-bin/get_player_data.php", function (data) {
             player = JSON.parse(data);
         });
         console.log(player);
