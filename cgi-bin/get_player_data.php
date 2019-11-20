@@ -10,8 +10,8 @@ $user_data = mysqli_fetch_assoc($result);
 // echo $user_data['username'];
 // echo $user_data["user_data"];
 
-$player_data_json = json_encode($user_data['user_data']);
-$_SESSION["user_data"] = $player_data_json;
-echo "<script>console.log(".$_SESSION["user_data"]."); </script>";
+$player_data_json = $user_data['user_data'];
+$_GET["user_data"] = $player_data_json;
+echo $_GET["user_data"];
 
 ?>

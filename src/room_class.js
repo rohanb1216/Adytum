@@ -1,3 +1,18 @@
+var room;
+// var request = $.get("../cgi-bin/get_player_data.php", function (data) {
+//     console.log(JSON.parse(data));
+//     return data;
+// });
+$.ajax({
+    url:"../cgi-bin/get_player_data.php",
+    type:"GET",
+    async:false,
+    success:function(data){
+        room=JSON.parse(data);
+    }
+});
+// console.log(request);
+console.log(room);
 var puzzle="puzzle";
 
 
@@ -18,13 +33,13 @@ class roomclass {
     }
 }
 
-function assignPlayer(playerobj){
-    var username = document.getElementById("dropdownMenuButton");
-    playerobj.username = username.innerText;
-    // for(let i =0 ;i<)
-    // roomUnlockStatus = []
+// function assignPlayer(playerobj){
+//     var username = document.getElementById("dropdownMenuButton");
+//     playerobj.username = username.innerText;
+//     // for(let i =0 ;i<)
+//     // roomUnlockStatus = []
 
-}
+// }
 
 function travel(currRoom, nextRoom) {
     if (room[currRoom] || room[nextRoom]) {
@@ -42,31 +57,10 @@ function hide(element) {
     ele.classList.toggle("Inactive");
 }
 
-// window.onload=function(){
-//     var hidebtn = document.getElementById("hide");
-//     hidebtn.addEventListener("click",function(){
-//         hide("navbar");
-//         if(hidebtn.innerHTML=="v"){
-//             hidebtn.innerHTML="^";
-//         }
-//         else{
-//             hidebtn.innerHTML="v";
-//         }
-//     },false);
-// };
+
 room1 = new roomclass("cipher", false, "roomno");
 room1.codeGenerate();
 console.log(room1.code);
 
-var player = {
-    username : "",
-    //This consists of boolean values of which rooms are unlocked and which aren't
-    //The room no. is mapped to the index of this array. 0 signifies starting room and 15 signifies ending room 
-    roomUnlockStatus : [],
-    currRoom : 0,
-    timeElasped : 0,
-    
-
-};
 
 
