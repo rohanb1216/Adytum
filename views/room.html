@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
-    <script src="../src/room_class.js"></script>
-    <script src="../src/playerdata.js"></script>
+    <!-- <script src="../src/playerdata.js"></script> -->
     <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "currRoom"
@@ -104,14 +103,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
-    <script>
+    <!-- <script>
         var player;
         // $.get("get_player_data.php");
         $.get("../cgi-bin/get_player_data.php", function (data) {
-            player = JSON.parse(data);
+            console.log(JSON.parse(data));
         });
         console.log(player);
-    </script>
+    </script> -->
+    <script src="../src/room_class.js"></script>
 </body>
 
 </html>

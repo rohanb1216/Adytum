@@ -42,18 +42,10 @@ function hide(element) {
     ele.classList.toggle("Inactive");
 }
 
-// window.onload=function(){
-//     var hidebtn = document.getElementById("hide");
-//     hidebtn.addEventListener("click",function(){
-//         hide("navbar");
-//         if(hidebtn.innerHTML=="v"){
-//             hidebtn.innerHTML="^";
-//         }
-//         else{
-//             hidebtn.innerHTML="v";
-//         }
-//     },false);
-// };
+$.get("../cgi-bin/get_player_data.php", function (data) {
+    console.log(JSON.parse(data));
+});
+
 room1 = new roomclass("cipher", false, "roomno");
 room1.codeGenerate();
 console.log(room1.code);
