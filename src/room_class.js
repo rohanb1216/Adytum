@@ -62,4 +62,5 @@ var player;
 $.get("get_player_data.php", function(data){
     player = JSON.parse(data);
 });
+console.log(player);
 
