@@ -1,4 +1,6 @@
 var puzzle="puzzle";
+
+
 class roomclass {
     constructor(puzzleType, special,page) {
         this.code = "";
@@ -19,7 +21,8 @@ class roomclass {
 function assignPlayer(playerobj){
     var username = document.getElementById("dropdownMenuButton");
     playerobj.username = username.innerText;
-
+    // for(let i =0 ;i<)
+    // roomUnlockStatus = []
 
 }
 
@@ -65,3 +68,5 @@ var player = {
     
 
 };
+
+

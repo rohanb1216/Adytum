@@ -47,6 +47,7 @@ if (isset($_POST['login'])) {
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
         echo "You are now logged in : ";  
+        include_once("get_player_data.php");
   	    header('location: ../views/home.html');
     }
     $errors = $processing_errors;
