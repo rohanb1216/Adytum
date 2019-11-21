@@ -1,3 +1,12 @@
+var room;
+$.ajax({
+    url:"../cgi-bin/get_player_data.php",
+    type:"GET",
+    async:false,
+    success:function(data){
+        room=JSON.parse(data);
+    }
+});
 function play(){
     window.location.href="../views/"+room.PlayerRoom+".html";
 }
