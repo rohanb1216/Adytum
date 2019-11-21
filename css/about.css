@@ -3,12 +3,14 @@ body{
 }
 
 #overview-title{
-    color : darkblue;
+    color : gainsboro;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 
 .generic-text{
-    color : darkblue;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color :whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
+    text-align: left;
 }
