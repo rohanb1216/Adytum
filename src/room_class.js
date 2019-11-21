@@ -18,7 +18,7 @@ var puzzle="puzzle";
 
 
 class roomclass {
-    constructor(puzzleType, special,page) {
+    constructor() {
         this.code = "";
     }
     codeGenerate() {

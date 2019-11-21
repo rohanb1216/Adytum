@@ -83,16 +83,21 @@ function register_user($username,$email,$password,$dbc){
         "room1": false,
         "room2": false,
         "room3": false,
-        "room4":false,
+        "room4": false,
+        "room5": false,
+        "room6": false,
+        "room7": false,
+        "room8": false,
+        "room9": false,
+        "room10": false,
         "PlayerRoom": "room1",
         "codes": {
           "room1": "ab",
-          "room2": "23",
+          "room2": 23,
           "room3": "c3",
-          "room4": "12"
+          "room4": 12
         }
       }';
-    
 
     $query = "INSERT INTO users (user_id,username, password, email, date_created) 
               VALUES(NULL, '$username', '$password','$email','$current_date');";
