@@ -31,7 +31,7 @@ include_once('addUser.php');
                 <a href="home.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-                <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+                <a href="../cgi-bin/leaderboards.php" class="nav-link">Leaderboard</a>
             </li>
             <li class="nav-item">
                 <a href="FAQ.html" class="nav-link">FAQ</a>

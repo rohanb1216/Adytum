@@ -284,3 +284,19 @@ tb:focus{
     transform: translate(-50%,-50%);
     transition: 0.25s;
   }
+
+
+.leaderboards{
+  color:whitesmoke;
+  position: fixed;
+  text-align: center;
+  top:15m;
+  left:52em;
+  padding:10px;
+
+}
+.leaderboards-table{
+  color:whitesmoke;
+  align-content: center;
+  padding:100px;
+}
