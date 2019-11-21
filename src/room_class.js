@@ -43,12 +43,24 @@ class roomclass {
 
 function travel(currRoom, nextRoom) {
     if (room[currRoom] || room[nextRoom]) {
+        room.PlayerRoom=nextRoom;
+        $.ajax({
+            url:"../cgi-bin/update_player_data.php",
+            type:"GET",
+            user_data :JSON.stringify(room),
+            success:function(data){
+                console.log(room);
+            }
+        });
         window.location.href = "../views/"+nextRoom+".html";
     }
 }
 function solved(currRoom) {
     //placeholder;  Replace with function to set value on server
     room[currRoom]=true;
+    $.get("../cgi-bin/update_player_data.php",{"user_data": JSON.stringify(room)}).done(function(data){
+        console.log(room);
+    });
 }
 
 function hide(element) {
