@@ -51,6 +51,9 @@ function travel(currRoom, nextRoom) {
         });
         
     }
+    else{
+        console.log("locked");
+    }
 }
 function solved(currRoom) {
     //placeholder;  Replace with function to set value on server
