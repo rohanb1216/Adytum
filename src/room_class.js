@@ -12,6 +12,7 @@ $.ajax({
     }
 });
 // console.log(request);
+// room.PlayerRoom=currRoom;
 console.log(room);
 var puzzle="puzzle";
 
@@ -50,9 +51,10 @@ function travel(currRoom, nextRoom) {
             user_data :JSON.stringify(room),
             success:function(data){
                 console.log(room);
+                window.location.href = "../views/"+nextRoom+".html";
             }
         });
-        window.location.href = "../views/"+nextRoom+".html";
+        
     }
 }
 function solved(currRoom) {
