@@ -50,13 +50,8 @@ function travel(currRoom, nextRoom) {
 }
 function solved(currRoom) {
     room[currRoom]=true;
-    $.ajax({
-        url:"../cgi-bin/update_player_data.php",
-        type:"GET",
-        user_data :JSON.stringify(room),
-        success:function(data){
-            console.log(room);
-        }
+    $.get("../cgi-bin/update_player_data.php",{"user_data": JSON.stringify(room)}).done(function(data){
+        console.log(room);
     });
 }
 
