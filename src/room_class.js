@@ -55,8 +55,13 @@ function travel(currRoom, nextRoom) {
 function solved(currRoom) {
     //placeholder;  Replace with function to set value on server
     room[currRoom]=true;
-    $.get("../cgi-bin/update_player_data.php",{"user_data": JSON.stringify(room)}).done(function(data){
-        console.log(room);
+    $.ajax({
+        url:"../cgi-bin/update_player_data.php",
+        type:"GET",
+        user_data :JSON.stringify(room),
+        success:function(data){
+            console.log(room);
+        }
     });
 }
 
