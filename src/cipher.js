@@ -17,11 +17,10 @@ function showText(text) {
 
 function check() {
     var answer = document.getElementById("answer").value;
-    console.log(answer);
     console.log(currRoom);
     if (answer == question) {
         solved(currRoom);
-        alert("solved");
+        // alert("solved");
         document.getElementById("incorrect").value="Correct";
         document.getElementById("answer").classList.remove(".incorrect");
         hide("puzzle");
