@@ -43,6 +43,7 @@
         <input type="text" name="username" placeholder="Username" id = "login-username">
         <input type="password" name="password" placeholder="Password" id = "login-password">
         <input type="submit" name="login" value="Login" >
+        <a href = "../cgi-bin/register.php" >New? Register now</a>
     </form>
     <?php include('loginerrors.php'); ?>
     

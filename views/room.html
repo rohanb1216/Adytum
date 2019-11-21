@@ -75,9 +75,9 @@
             <img src="../images/arrow_left.png" height="12.5" width="12.5">
         </button>
         <!-- class="general-button showPuzzle" -->
-        <button onclick=hide(puzzle) title="Click to view puzzle">
+        <button onclick=hide(puzzle) title="Click to view puzzle" style = "position:fixed ;top: 500px;">
             <img src="../images/puzzlebox.png" alt="Click to view puzzle" height="135" class="puzzleBox">
-        </button>
+        <!-- </button> -->
         <button onclick=travel(currRoom,rroom) class="room-button right">
             <img src="../images/arrow_right.png" height="12.5" width="12.5">
         </button><br>
@@ -95,6 +95,22 @@
             <button onclick=hide(puzzle) class="closebtn"></button>
         </div>
     </div>
+    <div class = "map" id = "map">
+            <div class = "gray-block" style = "top:400px; right:100px"></div>
+            <div class = "gray-block" style = "top:400px; right:75px"></div>
+            <div class = "gray-block" style = "top:400px; right:50px"></div>
+    
+            <div class = "gray-block" style = "top:425px; right:100px"></div>
+            <div class = "gray-block" style = "top:425px; right:75px"></div>
+            <div class = "gray-block" style = "top:425px; right:50px"></div>
+    
+            <div class = "gray-block" style = "top:450px; right:100px"></div>
+            <div class = "gray-block" style = "top:450px; right:75px"></div>
+            <div class = "gray-block" style = "top:450px; right:50px"></div>
+        </div>
+    
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -112,6 +128,7 @@
         console.log(player);
     </script> -->
     <script src="../src/room_class.js"></script>
+    <script src="../src/map.js"></script>
 </body>
 
 </html>

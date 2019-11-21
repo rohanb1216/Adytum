@@ -19,7 +19,7 @@ body{
 
 .login-box{
     width: 360px;
-    padding: 40px;
+    padding: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -290,13 +290,51 @@ tb:focus{
   color:whitesmoke;
   position: fixed;
   text-align: center;
-  top:15m;
+  top:200px;
   left:52em;
   padding:10px;
+  border: solid;
+  border-width: 2px;
+  border-color:gray;
 
 }
 .leaderboards-table{
   color:whitesmoke;
   align-content: center;
   padding:100px;
+}
+
+#map{
+  text-align: right;
+  position: fixed;
+  top : 100px ;
+  right: 100px;
+  padding: 50px;
+}
+
+.gray-block{
+  width:20px; 
+  height: 20px; 
+  border:1px solid white; 
+  background-color:gray;
+  position:absolute;
+
+}
+
+.curr-block{
+  width:20px; 
+  height: 20px; 
+  border:1px solid white; 
+  background-color:white;
+  position:absolute;
+
+}
+
+.open-block{
+  width:20px; 
+  height: 20px; 
+  border:1px solid white; 
+  background-color:greenyellow;
+  position:absolute;
+
 }
