@@ -1,8 +1,4 @@
-var room;
-// var request = $.get("../cgi-bin/get_player_data.php", function (data) {
-//     console.log(JSON.parse(data));
-//     return data;
-// });
+var room;   
 $.ajax({
     url:"../cgi-bin/get_player_data.php",
     type:"GET",
@@ -11,8 +7,7 @@ $.ajax({
         room=JSON.parse(data);
     }
 });
-// console.log(request);
-// room.PlayerRoom=currRoom;
+room.PlayerRoom=currRoom;
 console.log(room);
 var puzzle="puzzle";
 
