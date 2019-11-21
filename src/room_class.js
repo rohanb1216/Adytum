@@ -49,7 +49,6 @@ function travel(currRoom, nextRoom) {
     }
 }
 function solved(currRoom) {
-    //placeholder;  Replace with function to set value on server
     room[currRoom]=true;
     $.ajax({
         url:"../cgi-bin/update_player_data.php",
@@ -68,9 +67,9 @@ function hide(element) {
 }
 
 
-room1 = new roomclass("cipher", false, "roomno");
-room1.codeGenerate();
-console.log(room1.code);
+// room1 = new roomclass("cipher", false, "roomno");
+// room1.codeGenerate();
+// console.log(room1.code);
 
 
 
