@@ -33,14 +33,9 @@ function codeGenerate() {
 function travel(currRoom, nextRoom) {
     if (room[currRoom] || room[nextRoom]) {
         room.PlayerRoom=nextRoom;
-        $.ajax({
-            url:"../cgi-bin/update_player_data.php",
-            type:"GET",
-            user_data :JSON.stringify(room),
-            success:function(data){
-                console.log(room);
-                window.location.href = "../views/"+nextRoom+".html";
-            }
+        $.get("../cgi-bin/update_player_data.php",{"user_data": JSON.stringify(room)}).done(function(data){
+            console.log(room);
+            window.location.href = "../views/"+nextRoom+".html";
         });
         
     }
