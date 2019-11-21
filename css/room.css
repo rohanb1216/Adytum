@@ -29,8 +29,8 @@ body {
     width: 62.775vw;
     border-radius: 4px;
     border-style: none;
-    position: absolute;
-    left: 18vw;
+    position: relative;
+    left: 17%;
 }
 
 .room-button {
