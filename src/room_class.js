@@ -11,12 +11,7 @@ room.PlayerRoom=currRoom;
 console.log(room);
 var puzzle="puzzle";
 
-
-class roomclass {
-    constructor() {
-        this.code = "";
-    }
-    codeGenerate() {
+function codeGenerate() {
         var str = '';
         var res = '';
         for (var j = 0; j < 2; j++) {
@@ -25,10 +20,8 @@ class roomclass {
         }
         str += res;
         str += "\n";
-        this.code = str;
+        return str;
     }
-}
-
 // function assignPlayer(playerobj){
 //     var username = document.getElementById("dropdownMenuButton");
 //     playerobj.username = username.innerText;
