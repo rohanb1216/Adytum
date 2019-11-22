@@ -13,14 +13,16 @@
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
     <!-- <script src="../src/playerdata.js"></script> -->
-    <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "room2"
         var lroom = "room1";
         var rroom = "room3";
         var uroom = "";
-        var droom = "room5"; //change string accoding to map
+        var droom = "room5";
+        var question = "twenty seven";
+        //change string accoding to map
     </script>
+    <script src="../src/cipher.js"></script>
 </head>
 
 <body>
@@ -69,7 +71,7 @@
     <br>
     <br>
     <div class="room">
-            <img src="../images/backgroundedge1.png ">
+        <img src="../images/backgroundedge1.png ">
         <!-- <button class="room-button top" onclick=travel(currRoom,uroom)>
             <img src="../images/arrow_up.png" height="12.5" width="12.5">
         </button><br> -->
@@ -88,13 +90,16 @@
         </button>
     </div>
     <div id="puzzle" class="Inactive">
+        <button onclick=hide() class="closebtn"></button>
         <div class="wrapper">
-            <div id="question" class="txt-white"></div>
+            <div id="question" class="txt-white">
+                <img src="../images/triangles.png" style="position: relative; top:0%; width: 25%;"><br>Find the number
+                of triangles<br>
+            </div>
             <input type="text" id="answer" class="tb">
             <button class="general-button" onclick="check()">Submit</button>
             <br>
             <label id="incorrect">Incorrect</label>
-            <button onclick=hide() class="closebtn"></button>
         </div>
     </div>
 

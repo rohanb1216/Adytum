@@ -13,14 +13,16 @@
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
     <!-- <script src="../src/playerdata.js"></script> -->
-    <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "room4"
         var lroom = "";
         var rroom = "room5";
         var uroom = "room1";
-        var droom = "room7"; //change string accoding to map
+        var droom = "room7";
+        var question = "Boxing";
+        //change string accoding to map
     </script>
+    <script src="../src/cipher.js"></script>
 </head>
 
 <body>
@@ -88,13 +90,16 @@
         </button>
     </div>
     <div id="puzzle" class="Inactive">
+        <button onclick=hide() class="closebtn"></button>
         <div class="wrapper">
-            <div id="question" class="txt-white"></div>
+            <div id="question" class="txt-white">Name the one sport in which neither the spectators nor the participants
+                know the score or the leader until the
+                contest ends. </div>
+            <br>
             <input type="text" id="answer" class="tb">
             <button class="general-button" onclick="check()">Submit</button>
             <br>
             <label id="incorrect">Incorrect</label>
-            <button onclick=hide() class="closebtn"></button>
         </div>
     </div>
 

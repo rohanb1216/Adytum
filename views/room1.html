@@ -13,14 +13,16 @@
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
     <!-- <script src="../src/playerdata.js"></script> -->
-    <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "room1";
         var lroom = "";
         var rroom = "room2";
         var uroom = "";
-        var droom = "room4"; //change string accoding to map
+        var droom = "room4";
+        var question = "c and y"
+        //change string accoding to map
     </script>
+    <script src="../src/cipher.js"></script>
 </head>
 
 <body>
@@ -68,7 +70,7 @@
     <br>
     <br>
     <br>
-    <div class="room" >
+    <div class="room">
         <img src="../images/corner.png" style="transform: scaleX(-1);">
         <!-- <button class="room-button top" onclick=travel(currRoom,uroom)>
             <img src="../images/arrow_up.png" height="12.5" width="12.5">
@@ -88,13 +90,13 @@
         </button>
     </div>
     <div id="puzzle" class="Inactive">
+        <button onclick=hide() class="closebtn"></button>
         <div class="wrapper">
-            <div id="question" class="txt-white"></div>
+            <div id="question" class="txt-white">The word CANDY can be spelled using just 2 letters. How?</div>
             <input type="text" id="answer" class="tb">
             <button class="general-button" onclick="check()">Submit</button>
             <br>
             <label id="incorrect">Incorrect</label>
-            <button onclick=hide() class="closebtn"></button>
         </div>
     </div>
 

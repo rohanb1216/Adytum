@@ -13,14 +13,16 @@
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
     <!-- <script src="../src/playerdata.js"></script> -->
-    <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "room6"
         var lroom = "room5";
         var rroom = "";
         var uroom = "room3";
-        var droom = "room9"; //change string accoding to map
+        var droom = "room9";
+        var question = "ton";
+        //change string accoding to map
     </script>
+    <script src="../src/cipher.js"></script>
 </head>
 
 <body>
@@ -69,7 +71,7 @@
     <br>
     <br>
     <div class="room">
-        <img src="../images/backgroundedge2.png"/>
+        <img src="../images/backgroundedge2.png" />
         <button class="room-button top" onclick=travel(currRoom,uroom)>
             <img src="../images/arrow_up.png" height="12.5" width="12.5">
         </button><br>
@@ -88,30 +90,30 @@
         </button>
     </div>
     <div id="puzzle" class="Inactive">
+        <button onclick=hide() class="closebtn"></button>
         <div class="wrapper">
-            <div id="question" class="txt-white"></div>
+            <div id="question" class="txt-white">Forward am heavy, backwards am not. What am I?</div><br>
             <input type="text" id="answer" class="tb">
             <button class="general-button" onclick="check()">Submit</button>
             <br>
             <label id="incorrect">Incorrect</label>
-            <button onclick=hide() class="closebtn"></button>
         </div>
     </div>
 
-    <div class = "map" id = "map">
-            <div class = "gray-block" style = "top:400px; right:100px"></div>
-            <div class = "gray-block" style = "top:400px; right:75px"></div>
-            <div class = "gray-block" style = "top:400px; right:50px"></div>
-    
-            <div class = "gray-block" style = "top:425px; right:100px"></div>
-            <div class = "gray-block" style = "top:425px; right:75px"></div>
-            <div class = "gray-block" style = "top:425px; right:50px"></div>
-    
-            <div class = "gray-block" style = "top:450px; right:100px"></div>
-            <div class = "gray-block" style = "top:450px; right:75px"></div>
-            <div class = "gray-block" style = "top:450px; right:50px"></div>
+    <div class="map" id="map">
+        <div class="gray-block" style="top:400px; right:100px"></div>
+        <div class="gray-block" style="top:400px; right:75px"></div>
+        <div class="gray-block" style="top:400px; right:50px"></div>
+
+        <div class="gray-block" style="top:425px; right:100px"></div>
+        <div class="gray-block" style="top:425px; right:75px"></div>
+        <div class="gray-block" style="top:425px; right:50px"></div>
+
+        <div class="gray-block" style="top:450px; right:100px"></div>
+        <div class="gray-block" style="top:450px; right:75px"></div>
+        <div class="gray-block" style="top:450px; right:50px"></div>
     </div>
-    
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

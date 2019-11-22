@@ -13,14 +13,16 @@
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
     <!-- <script src="../src/playerdata.js"></script> -->
-    <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "room8"
         var lroom = "room7";
         var rroom = "room9";
         var uroom = "room5";
-        var droom = ""; //change string accoding to map
+        var droom = "";
+        var question = "ent";
+        //change string accoding to map
     </script>
+    <script src="../src/cipher.js"></script>
 </head>
 
 <body>
@@ -88,13 +90,13 @@
         </button> -->
     </div>
     <div id="puzzle" class="Inactive">
+        <button onclick=hide() class="closebtn"></button>
         <div class="wrapper">
-            <div id="question" class="txt-white"></div>
+            <div id="question" class="txt-white">What is the next 3 letters for the sequence ottffs_ _ _ ?</div><br>
             <input type="text" id="answer" class="tb">
             <button class="general-button" onclick="check()">Submit</button>
             <br>
             <label id="incorrect">Incorrect</label>
-            <button onclick=hide() class="closebtn"></button>
         </div>
     </div>
 

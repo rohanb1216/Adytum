@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
     <!-- <script src="../src/playerdata.js"></script> -->
-    <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "room9"
         var lroom = "room8";
@@ -21,6 +20,7 @@
         var uroom = "room6";
         var droom = ""; //change string accoding to map
     </script>
+    <script src="../src/cipher.js"></script>
 </head>
 
 <body>
@@ -88,13 +88,16 @@
         </button> -->
     </div>
     <div id="puzzle" class="Inactive">
+        <button onclick=hide() class="closebtn"></button>
         <div class="wrapper">
-            <div id="question" class="txt-white"></div>
+            <div id="question" class="txt-white">If a red house is made from red bricks, and a blue house is made from
+                blue bricks,
+                and a pink house is madefrom pink bricks and a black house is made from black bricks, what is a green
+                house made from?</div><br>
             <input type="text" id="answer" class="tb">
             <button class="general-button" onclick="check()">Submit</button>
             <br>
             <label id="incorrect">Incorrect</label>
-            <button onclick=hide() class="closebtn"></button>
         </div>
     </div>
 
