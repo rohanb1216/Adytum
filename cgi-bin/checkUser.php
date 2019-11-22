@@ -46,9 +46,20 @@ if (isset($_POST['login'])) {
     if(count($username_errors) == 0 && count($processing_errors) == 0){
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
-        echo "You are now logged in : ";  
-        include_once("get_player_data.php");
-          header('location: ../views/index.html');
+        // echo "You are now logged in : ";  
+        // include_once("get_player_data.php");
+        $username = $_SESSION["username"];
+        $query = "SELECT * FROM player_data WHERE username= '$username';";
+
+        $result = mysqli_query($dbc, $query);
+        $user_data = mysqli_fetch_assoc($result);
+        $_SESSION['user_data']=$user_data['user_data'];
+        // echo $user_data['username'];
+        // echo $user_data["user_data"];
+
+        $player_data_json = $user_data['user_data'];
+        $userdata = $player_data_json;
+        header('location: ../views/index.html');
     }
     $errors = $processing_errors;
     if(empty($processing_errors)){

@@ -6,6 +6,11 @@ if($_POST['login-logout-btn']){
         header('location: login.php');
     }
     else{
-        include_once('log_out.php');
+        if($_SESSION['username'] != NULL){
+            session_unset();
+        }
+        header('location: ../index.html');
     }
 }
+
+?>
