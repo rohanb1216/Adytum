@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../views/home.html" class="nav-link">Home</a>
+                <a href="../views/index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" onclick="play()">Room</a>
