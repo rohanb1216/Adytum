@@ -51,6 +51,7 @@ include_once('addUser.php');
         <input type="password" id="reg-password" name="password" placeholder="Create a password">
         <input type="password" id="reg-password-confirm" name="password_confirm" placeholder="Re-enter password">
         <input type="submit" name="submit" value="Sign Up">
+        <a href = "../cgi-bin/login.php" >Already a user? Sign in</a>
 
     </form>
     <?php include('regerrors.php'); ?>

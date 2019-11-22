@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <title>Adytum : An online cryptic game</title>
+    <title>Adytum | An online cryptic game</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../src/home.js"></script>
+    <!-- <script src="../src/playerdata.js"></script> -->
     <link rel="stylesheet" type="text/css" href="../css/general.css">
     <link rel="stylesheet" type="text/css" href="../css/room.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
 </head>
@@ -27,6 +28,9 @@
                 <a href="home.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" onclick=play()>Room</a>
+            </li>
+            <li class="nav-item">
                 <a href="../cgi-bin/leaderboards.php" class="nav-link">Leaderboard</a>
             </li>
             <li class="nav-item">
@@ -36,22 +40,25 @@
                 <a href="about.html" class="nav-link">About</a>
             </li>
         </ul>
+
         <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php include_once('../cgi-bin/display_user.php'); ?>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <form action = "../cgi-bin/linout.php" method = "POST">
-                        <input type="submit" class ="no-button" name = "login-logout-btn" value = " <?php include_once('../cgi-bin/login_value.php'); ?> ">
+                        <input type="submit" id = "login-logout-button" class ="no-button" name = "login-logout-btn" value = " <?php include_once('../cgi-bin/login_value.php'); ?> ">
                     </form>                  
                 </div>
         </div>
     </nav>
-    <img src="../images/pyramid_top_view.jpeg" id="pyramid-home" width=700px height=500px>
-    <div id="get-started-btn">
-        <button id="get-started" class="general-button" onclick="goToLogin()">Get Started</button>
-    </div>
+    <br>
+    <br>
 
+    <img src="../images/bg.png" id="pyramid-home" width=700px height=500px>
+    <div id="get-started-btn" style="text-align:center;">
+        <button id="get-started" class="general-button" >Get Started</button>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -60,6 +67,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="../src/home.js"></script>
+
 </body>
 
 </html>

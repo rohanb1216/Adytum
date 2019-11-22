@@ -68,14 +68,16 @@
     <br>
     <br>
     <br>
-    <div class="room"><button class="room-button" onclick=travel(currRoom,uroom)>
+    <div class="room" >
+        <img src="../images/corner.png" style="transform: scaleX(-1);">
+        <!-- <button class="room-button top" onclick=travel(currRoom,uroom)>
             <img src="../images/arrow_up.png" height="12.5" width="12.5">
         </button><br>
         <button onclick=travel(currRoom,lroom) class="room-button left">
             <img src="../images/arrow_left.png" height="12.5" width="12.5">
-        </button>
+        </button> -->
         <!-- class="general-button showPuzzle" -->
-        <button onclick=hide(puzzle) title="Click to view puzzle">
+        <button onclick=hide() title="Click to view puzzle">
             <img src="../images/puzzlebox.png" alt="Click to view puzzle" height="135" class="puzzleBox">
         </button>
         <button onclick=travel(currRoom,rroom) class="room-button right">
@@ -92,22 +94,22 @@
             <button class="general-button" onclick="check()">Submit</button>
             <br>
             <label id="incorrect">Incorrect</label>
-            <button onclick=hide(puzzle) class="closebtn"></button>
+            <button onclick=hide() class="closebtn"></button>
         </div>
     </div>
 
-    <div class = "map" id = "map">
-        <div class = "gray-block" style = "top:400px; right:100px"></div>
-        <div class = "gray-block" style = "top:400px; right:75px"></div>
-        <div class = "gray-block" style = "top:400px; right:50px"></div>
+    <div class="map" id="map">
+        <div class="gray-block" style="top:400px; right:100px"></div>
+        <div class="gray-block" style="top:400px; right:75px"></div>
+        <div class="gray-block" style="top:400px; right:50px"></div>
 
-        <div class = "gray-block" style = "top:425px; right:100px"></div>
-        <div class = "gray-block" style = "top:425px; right:75px"></div>
-        <div class = "gray-block" style = "top:425px; right:50px"></div>
+        <div class="gray-block" style="top:425px; right:100px"></div>
+        <div class="gray-block" style="top:425px; right:75px"></div>
+        <div class="gray-block" style="top:425px; right:50px"></div>
 
-        <div class = "gray-block" style = "top:450px; right:100px"></div>
-        <div class = "gray-block" style = "top:450px; right:75px"></div>
-        <div class = "gray-block" style = "top:450px; right:50px"></div>
+        <div class="gray-block" style="top:450px; right:100px"></div>
+        <div class="gray-block" style="top:450px; right:75px"></div>
+        <div class="gray-block" style="top:450px; right:50px"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"

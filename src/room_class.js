@@ -50,8 +50,8 @@ function solved(currRoom) {
     });
 }
 
-function hide(element) {
-    var ele = document.getElementById(element);
+function hide() {
+    var ele = document.getElementById("puzzle");
     ele.classList.toggle("Active");
     ele.classList.toggle("Inactive");
 }
