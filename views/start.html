@@ -41,23 +41,29 @@
             </li>
         </ul>
         <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?php include_once('../cgi-bin/display_user.php'); ?>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <form action = "../cgi-bin/linout.php" method = "POST">
-                        <input type="submit" class ="no-button" name = "login-logout-btn" value = " <?php include_once('../cgi-bin/login_value.php'); ?> ">
-                    </form>                  
-                </div>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?php include_once('../cgi-bin/display_user.php'); ?>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <form action="../cgi-bin/linout.php" method="POST">
+                    <input type="submit" class="no-button" name="login-logout-btn"
+                        value=" <?php include_once('../cgi-bin/login_value.php'); ?> ">
+                </form>
+            </div>
         </div>
     </nav>
     <!-- add css to make text readable -->
     <br>
     <br>
-    <h1 id="overview-title">Epilogue</h1>
-    <h2 id="overview-title">
-    As the final piece of the puzzle clicks into place, a loud rumble comes from above. <br>
-    Any trickle of light in the crypt disappears. You're trapped here forever, doomed to become nothing but a skeleton.</h2>
+    <h1 id="overview-title">Prologue</h1>
+    <pre id="overview-title">
+            One a bright summer morning, you find yourself exploring a cave system in western Greece. You've done this many times before.
+        You have no reason to worry. All of a sudden, the ground crumbles beneath your feet and caves in.
+        You find yourself in a large room. Looking around, you see an inscription on the wall.
+        
+                                                <a href="room1.html"><h1>ADYTUM</h1></a>
+    </pre>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
