@@ -31,6 +31,9 @@ function codeGenerate() {
 // }
 
 function travel(currRoom, nextRoom) {
+    if(room.room1&&room.room3&&room.room7&&room.room9){
+        window.location.href="../views/complete.html";
+    }
     if (room[currRoom] || room[nextRoom]) {
         room.PlayerRoom=nextRoom;
         $.get("../cgi-bin/update_player_data.php",{"user_data": JSON.stringify(room)}).done(function(data){
