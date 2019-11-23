@@ -12,7 +12,7 @@ $_SESSION['user_data']=$user_data['user_data'];
 // echo $user_data["user_data"];
 
 $player_data_json = $user_data['user_data'];
-$_GET["user_data"] = $player_data_json;
-echo $_GET["user_data"];
+$userdata = $player_data_json;
+echo $userdata;
 
 ?>

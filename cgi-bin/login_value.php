@@ -1,8 +1,8 @@
 <?php 
 session_start();
 if($_SESSION['username'] == NULL){
-    echo "Login";
+    echo 'Login';
 }
 else{
-    echo "Logout";
+    echo 'Logout';
 }
