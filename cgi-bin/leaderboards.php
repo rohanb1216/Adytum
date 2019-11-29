@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +27,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../views/home.html" class="nav-link">Home</a>
+                <a href="../views/index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" onclick="play()">Room</a>
@@ -42,11 +45,22 @@
 
         <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?php include_once('../cgi-bin/display_user.php'); ?>
+                        <?php
+                        if($_SESSION['username'] != NULL){
+                            echo $_SESSION["username"];
+                        }
+                        else{
+                            echo "Anonymous";
+                        } ?>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <form action = "../cgi-bin/linout.php" method = "POST">
-                        <input type="submit" id = "login-logout-button" class ="no-button" name = "login-logout-btn" value = " <?php include_once('../cgi-bin/login_value.php'); ?> ">
+                        <input type="submit" id = "login-logout-button" class ="no-button" name = "login-logout-btn" value = "<?php if($_SESSION['username'] == NULL){
+    echo 'Login';
+}
+else{
+    echo 'Logout';
+} ?> ">
                     </form>                  
                 </div>
         </div>

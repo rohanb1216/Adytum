@@ -111,7 +111,7 @@ function register_user($username,$email,$password,$dbc){
     $_SESSION['success'] = "You are now logged in";
     $_SESSION['user_data'] = $default_data;
     
-    header('location: ../views/home.html');
+    header('location: ../views/start.html');
 
 }
 

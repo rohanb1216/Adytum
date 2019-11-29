@@ -23,16 +23,16 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="home.html" class="nav-link">Home</a>
+                <a href="../views/index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-                <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+                <a href="../views/leaderboard.html" class="nav-link">Leaderboard</a>
             </li>
             <li class="nav-item">
-                <a href="FAQ.html" class="nav-link">FAQ</a>
+                <a href="../views/FAQ.html" class="nav-link">FAQ</a>
             </li>
             <li class="nav-item">
-                <a href="about.html" class="nav-link">About</a>
+                <a href="../views/about.html" class="nav-link">About</a>
             </li>
         </ul>
     </nav>

@@ -11,12 +11,7 @@ room.PlayerRoom=currRoom;
 console.log(room);
 var puzzle="puzzle";
 
-
-class roomclass {
-    constructor() {
-        this.code = "";
-    }
-    codeGenerate() {
+function codeGenerate() {
         var str = '';
         var res = '';
         for (var j = 0; j < 2; j++) {
@@ -25,10 +20,8 @@ class roomclass {
         }
         str += res;
         str += "\n";
-        this.code = str;
+        return str;
     }
-}
-
 // function assignPlayer(playerobj){
 //     var username = document.getElementById("dropdownMenuButton");
 //     playerobj.username = username.innerText;
@@ -38,43 +31,38 @@ class roomclass {
 // }
 
 function travel(currRoom, nextRoom) {
+    if(room.room1&&room.room3&&room.room7&&room.room9){
+        window.location.href="../views/complete.html";
+    }
     if (room[currRoom] || room[nextRoom]) {
         room.PlayerRoom=nextRoom;
-        $.ajax({
-            url:"../cgi-bin/update_player_data.php",
-            type:"GET",
-            user_data :JSON.stringify(room),
-            success:function(data){
-                console.log(room);
-                window.location.href = "../views/"+nextRoom+".html";
-            }
+        $.get("../cgi-bin/update_player_data.php",{"user_data": JSON.stringify(room)}).done(function(data){
+            console.log(room);
+            window.location.href = "../views/"+nextRoom+".html";
         });
         
     }
+    else{
+        console.log("locked");
+    }
 }
 function solved(currRoom) {
-    //placeholder;  Replace with function to set value on server
     room[currRoom]=true;
-    $.ajax({
-        url:"../cgi-bin/update_player_data.php",
-        type:"GET",
-        user_data :JSON.stringify(room),
-        success:function(data){
-            console.log(room);
-        }
+    $.get("../cgi-bin/update_player_data.php",{"user_data": JSON.stringify(room)}).done(function(data){
+        console.log(room);
     });
 }
 
-function hide(element) {
-    var ele = document.getElementById(element);
+function hide() {
+    var ele = document.getElementById("puzzle");
     ele.classList.toggle("Active");
     ele.classList.toggle("Inactive");
 }
 
 
-room1 = new roomclass("cipher", false, "roomno");
-room1.codeGenerate();
-console.log(room1.code);
+// room1 = new roomclass("cipher", false, "roomno");
+// room1.codeGenerate();
+// console.log(room1.code);
 
 
 

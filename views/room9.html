@@ -1,3 +1,6 @@
+<?php
+                        session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
     <!-- <script src="../src/playerdata.js"></script> -->
-    <script src="../src/cipher.js"></script>
     <script>
         var currRoom = "room9"
         var lroom = "room8";
@@ -21,6 +23,7 @@
         var uroom = "room6";
         var droom = ""; //change string accoding to map
     </script>
+    <script src="../src/cipher.js"></script>
 </head>
 
 <body>
@@ -40,7 +43,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="home.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
                 <a href="leaderboard.html" class="nav-link">Leaderboard</a>
@@ -55,12 +58,25 @@
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <?php include_once('../cgi-bin/display_user.php'); ?>
+                <?php
+                        if($_SESSION['username'] != NULL){
+                            echo $_SESSION["username"];
+                        }
+                        else{
+                            echo "Anonymous";
+                        } ?>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <form action="../cgi-bin/linout.php" method="POST">
                     <input type="submit" class="no-button" name="login-logout-btn"
-                        value=" <?php include_once('../cgi-bin/login_value.php'); ?> ">
+                        value=" <?php 
+if(!isset($_SESSION['username']) && $_SESSION['username'] == NULL){
+    echo 'Login';
+}
+else{
+    echo 'Logout';
+}
+?> ">
                 </form>
             </div>
         </div>
@@ -68,48 +84,53 @@
     <br>
     <br>
     <br>
-    <div class="room"><button class="room-button" onclick=travel(currRoom,uroom)>
+    <div class="room">
+        <img src="../images/corner.png" style="transform: scaleY(-1);">
+        <button class="room-button top" onclick=travel(currRoom,uroom)>
             <img src="../images/arrow_up.png" height="12.5" width="12.5">
         </button><br>
         <button onclick=travel(currRoom,lroom) class="room-button left">
             <img src="../images/arrow_left.png" height="12.5" width="12.5">
         </button>
         <!-- class="general-button showPuzzle" -->
-        <button onclick=hide(puzzle) title="Click to view puzzle">
+        <button onclick=hide() title="Click to view puzzle">
             <img src="../images/puzzlebox.png" alt="Click to view puzzle" height="135" class="puzzleBox">
         </button>
-        <button onclick=travel(currRoom,rroom) class="room-button right">
+        <!-- <button onclick=travel(currRoom,rroom) class="room-button right">
             <img src="../images/arrow_right.png" height="12.5" width="12.5">
-        </button><br>
-        <button onclick=travel(currRoom,droom) class="room-button bottom">
+        </button><br> -->
+        <!-- <button onclick=travel(currRoom,droom) class="room-button bottom">
             <img src="../images/arrow_down.png" height="12.5" width="12.5">
-        </button>
+        </button> -->
     </div>
     <div id="puzzle" class="Inactive">
+        <button onclick=hide() class="closebtn"></button>
         <div class="wrapper">
-            <div id="question" class="txt-white"></div>
+            <div id="question" class="txt-white">If a red house is made from red bricks, and a blue house is made from
+                blue bricks,
+                and a pink house is madefrom pink bricks and a black house is made from black bricks, what is a green
+                house made from?</div><br>
             <input type="text" id="answer" class="tb">
             <button class="general-button" onclick="check()">Submit</button>
             <br>
             <label id="incorrect">Incorrect</label>
-            <button onclick=hide(puzzle) class="closebtn"></button>
         </div>
     </div>
 
-    <div class = "map" id = "map">
-            <div class = "gray-block" style = "top:400px; right:100px"></div>
-            <div class = "gray-block" style = "top:400px; right:75px"></div>
-            <div class = "gray-block" style = "top:400px; right:50px"></div>
-    
-            <div class = "gray-block" style = "top:425px; right:100px"></div>
-            <div class = "gray-block" style = "top:425px; right:75px"></div>
-            <div class = "gray-block" style = "top:425px; right:50px"></div>
-    
-            <div class = "gray-block" style = "top:450px; right:100px"></div>
-            <div class = "gray-block" style = "top:450px; right:75px"></div>
-            <div class = "gray-block" style = "top:450px; right:50px"></div>
+    <div class="map" id="map">
+        <div class="gray-block" style="top:400px; right:100px"></div>
+        <div class="gray-block" style="top:400px; right:75px"></div>
+        <div class="gray-block" style="top:400px; right:50px"></div>
+
+        <div class="gray-block" style="top:425px; right:100px"></div>
+        <div class="gray-block" style="top:425px; right:75px"></div>
+        <div class="gray-block" style="top:425px; right:50px"></div>
+
+        <div class="gray-block" style="top:450px; right:100px"></div>
+        <div class="gray-block" style="top:450px; right:75px"></div>
+        <div class="gray-block" style="top:450px; right:50px"></div>
     </div>
-    
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

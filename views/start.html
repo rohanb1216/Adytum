@@ -1,3 +1,6 @@
+<?php
+                        session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,9 +10,10 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <title>Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../src/playerdata.js"></script>
+    <!-- <script src="../src/playerdata.js"></script> -->
     <script src="../src/home.js"></script>
     <!-- <script src="../src/contactus.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="../css/about.css">
     <link rel="stylesheet" type="text/css" href="../css/room.css">
     <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
 
@@ -24,7 +28,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="home.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" onclick="play()">Room</a>
@@ -40,18 +44,42 @@
             </li>
         </ul>
         <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?php include_once('../cgi-bin/display_user.php'); ?>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <form action = "../cgi-bin/linout.php" method = "POST">
-                        <input type="submit" class ="no-button" name = "login-logout-btn" value = " <?php include_once('../cgi-bin/login_value.php'); ?> ">
-                    </form>                  
-                </div>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?php
+                        if($_SESSION['username'] != NULL){
+                            echo $_SESSION["username"];
+                        }
+                        else{
+                            echo "Anonymous";
+                        } ?>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <form action="../cgi-bin/linout.php" method="POST">
+                    <input type="submit" class="no-button" name="login-logout-btn"
+                        value=" <?php 
+if(!isset($_SESSION['username']) && $_SESSION['username'] == NULL){
+    echo 'Login';
+}
+else{
+    echo 'Logout';
+}
+?> ">
+                </form>
+            </div>
         </div>
     </nav>
     <!-- add css to make text readable -->
-    <h1>Contact Us</h1>
+    <br>
+    <br>
+    <h1 id="overview-title">Prologue</h1>
+    <pre id="overview-title">
+            One a bright summer morning, you find yourself exploring a cave system in western Greece. You've done this many times before.
+        You have no reason to worry. All of a sudden, the ground crumbles beneath your feet and caves in.
+        You find yourself in a large room. Looking around, you see an inscription on the wall.
+        
+                                                <a href="room1.html"><h1>ADYTUM</h1></a>
+    </pre>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

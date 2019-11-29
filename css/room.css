@@ -20,20 +20,21 @@ body {
 
 .room {
     text-align: center;
-    background-image: url("../images/background.png");
+    /* background-image: url("../images/background.png"); */
     background-size: contain;
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
-    height: 88vh;
-    width: 62.775vw;
+    height: 88%;
+    width: 62.775%;
     border-radius: 4px;
     border-style: none;
-    position: absolute;
-    left: 18vw;
+    position: relative;
+    left: 17%;
 }
 
 .room-button {
+    position: relative;
     padding: 0px;
     width: 40px;
     height: 40px;
@@ -47,7 +48,11 @@ body {
     background-color:#0091ff ;
     transition: background-color 0.5s;
 }
-
+.top{
+    position: absolute;
+    top: 10px;
+    left: 48%;
+}
 .bottom {
     position: absolute;
     bottom: 10px;
@@ -74,11 +79,11 @@ body {
 }
 
 #puzzle {
-    height: 88vh;
-    width: 60.1vw;
+    height: 90%;
+    width: 64%;
     position: absolute;
-    top: 9.8vh;
-    left: 19.3875vw;
+    top: 10%;
+    left: 16%;
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     z-index: 1;
